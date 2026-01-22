@@ -22,16 +22,24 @@
 
 :root{
     --dark1:#0c0c0c8c;
-    --bg1: #202022;
-    --bg2: #2d2e32;
     --bg3: #25262a;
-    --gr1: #64f4ac;
-    --gr2: #64f4acea;
+
+    --slate-50: #f8fafc;
+    --slate-100: #f1f5f9;
+    --slate-200: #e2e8f0;
+    --slate-300: #cbd5e1;
+    --slate-400: #94a3b8;
+    --slate-500: #64748b;
+    --slate-600: #475569;
+    --slate-700: #334155;
+    --slate-800: #1e293b;
+    --slate-900: #0f172a;
+
+    --blue1: #3e64ff;
     --gr3: rgb(100, 244, 172, .7);
-    --grnbg1:#05ff82;
+    --bluebg:#3e64ff1a;
     --grnbg2:#15eb80;
     --grnbg3:rgb(3, 252, 128, .4);
-    --white1:#fff;
     --white2:#ccc;
     --white3:rgb(129, 129, 129);
     --red1:#ff0000;
@@ -71,8 +79,8 @@ body{
     left: 0px;
     overflow-x: hidden;
     font-family: var(--poppin);
-    color: var(--white1);
-    background: var(--bg1);
+    color: var(--slate-900);
+    background: #fff;
 }
 
 
@@ -83,8 +91,8 @@ body{
 .navbar .right ul a .mail{
     padding: 8px;
     font-size: 30px;
-    background: var(--bg1);
-    color: var(--gr1);
+    background: var(--slate-100);
+    color: var(--blue1);
     border-radius: 50%;
     opacity: .7;
 }
@@ -97,7 +105,7 @@ body{
     position: fixed;
     left: 0px;
     bottom: -5px;
-    background: var(--bg3);
+    background: var(--slate-50);
     box-shadow: 0px 0px 4px #000;
     z-index: 1000;
     overflow: hidden;
@@ -147,13 +155,13 @@ body{
     display: flex;
     transition:all .3s ease;
     transform: translateY(-2px);
-    color: var(--gr2);
+    color: var(--blue1);
 }
 
 .mobileNav .main .li:hover > .icon{
-    background: var(--bg1);
+    background: var(--slate-100);
     border-radius: 50%;
-    color: var(--gr2);
+    color: var(--blue1);
     transition:all .2s ease;
 }
 
@@ -176,14 +184,14 @@ body{
     font-weight: 300;
     transition:all .3s ease;
     transform: translateY(-2px);
-    color: var(--gr2);
+    color: var(--blue1);
 }
 
 .mobileNav .main .active > .icon{
     padding: 7px;
-    background: var(--bg1);
+    background: var(--slate-100);
     border-radius: 50%;
-    color: var(--gr2);
+    color: var(--blue1);
     transition:all .2s ease;
 }
 
@@ -195,7 +203,7 @@ body{
 }
 
 
-.header .main{
+.intro .main{
     width: 50%;
     height: auto;
     position: relative;
@@ -205,10 +213,10 @@ body{
     flex-direction: column;
 }
 
-.header .mainArea{
+.intro .mainArea{
     width: 300px;
     height: 300px;
-    background: var(--bg3);
+    background: var(--slate-50);
     border-radius: 50%;
     padding: 15vmin;
     display: flex;
@@ -218,11 +226,11 @@ body{
 }
 
 
-.header .mainArea .avatar{
+.intro .mainArea .avatar{
     width: 45vmax;
 }
 
-.header .main .circleA{
+.intro .main .circleA{
     width: 250px;
     height:250px;
     /* border: 2px solid var(--grnbg2); */
@@ -232,22 +240,22 @@ body{
     border-radius: 50%;
 }
 
-.header .circleA .langImgA{
+.intro .circleA .langImgA{
     width: 10vmin;
     padding: 12px;
     position: absolute;
     top: 10px;
     right: 10px;
-    background: var(--bg2);
+    background: var(--slate-200);
     border-radius: 50%;
-    box-shadow: 0px 0px 15px var(--bg1);
+    box-shadow: 0px 0px 15px var(--slate-100);
     z-index: 100;
     animation: cylceA 10s linear infinite;
     transition: all .2s ease;
 }
 
 
-.header .circleB{
+.intro .circleB{
     width: 250px;
     height:250px;
     /* border: 2px solid green; */
@@ -260,15 +268,15 @@ body{
 }   
 
 
-.header .circleB .langImgB{
+.intro .circleB .langImgB{
     width: 20vmin;
     padding: 15px;
     position: absolute;
     right: 20px;
     bottom: -50px;
-    background: var(--bg2);
+    background: var(--slate-200);
     border-radius: 50%;
-    box-shadow: 0px 0px 15px var(--bg1);
+    box-shadow: 0px 0px 15px var(--slate-100);
     z-index: 100;
     animation: cylceB 10s linear infinite;
     transition: all .2s ease;
@@ -276,7 +284,7 @@ body{
 
 
 
-.header .circleC{
+.intro .circleC{
     width: 250px;
     height:250px;
     /* border: 2px solid var(--red1); */
@@ -288,35 +296,35 @@ body{
     border-radius: 50%;
 }
 
-.header .circleC .langImgC{
+.intro .circleC .langImgC{
     width: 15vmin;
     padding: 15px;
     position: absolute;
     left: -50px;
     top: 100px;
-    background: var(--bg2);
+    background: var(--slate-200);
     border-radius: 50%;
-    box-shadow: 0px 0px 15px var(--bg1);
+    box-shadow: 0px 0px 15px var(--slate-100);
     z-index: 100;
     animation: cylceC 10s linear infinite;
     transition: all .2s ease;
 }
 
-.header .langImgA:hover{
+.intro .langImgA:hover{
     filter: grayscale(0%);
 }
 
-.header .langImgB:hover{
+.intro .langImgB:hover{
     filter: grayscale(0%);
 }
 
-.header .langImgC:hover{ 
+.intro .langImgC:hover{ 
     filter: grayscale(0%);
 } 
 
 
 @media(max-width: 700px) {
-    .header .main{
+    .intro .main{
         display: none;
     }
 }

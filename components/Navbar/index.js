@@ -12,7 +12,7 @@ function NavBar() {
 
     return (
         <React.Fragment>
-            <div className={`navbar relative h-auto w-full flex align-center justify-between py-[20px]`}>
+            <div className={`navbar sticky top-0 h-auto w-full mx-auto md:w-[80%] flex align-center justify-between py-[20px]`}>
                 <div className={`left w-auto flex align-start items-start justify-start px-[10px] `}>
                     <p className={`font-extrabold mr-[20px]`}>{usersInfo.github_username.charAt(0).toUpperCase() + usersInfo.github_username.slice(1)}</p>
 

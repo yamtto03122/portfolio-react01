@@ -1,11 +1,11 @@
 {
-  "full_name": "Benaiah Alumona",
-  "tag_line": "Making The Impossible Possible. Using 1's and 0's.",
-  "intro_tagline": "Mission driven software engineer, with a passion for thoughtful UI design, collaboration, and teaching." ,
-  "subTitle": "Problem solving is what makes me unique.",
-  "tech_year": "2019",
-  "github_username": "benrobo",
-  "user_skill": "Software Engineer",
+  "full_name": "Kim Do Young",
+  "tag_line": "코드를 넘어서 흐름을 설계합니다",
+  "subTitle": "사용자의 다음 행동을 먼저 생각하고, 자연스러운 경험으로 구현합니다",
+  "tech_year": "2022",
+  "github_username": "DoYoung",
+  "user_skill": "Front-end Developer",
+  "intro_tagline": "커피와 노트북만 있다면, 언제 어디서나 즐겁게 일하는 4년차 프론트앤드 개발자 김도영입니다." ,
   "favorites_quote": "Willingness to take intelligient risks in the pursuit of your clearly defined goals, put you on a greater side of life. Enabling you to archive the same level of success in 1 or 2 years, which may take other people10 or 20 years to archieve, if lessed focused.",
   "greeting_type": "Hi ✌",
   "bio_desc": [
