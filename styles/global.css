@@ -74,9 +74,7 @@ li{
 
 body{
     width: 100%;
-    height: 100vh;
-    position: relative;
-    left: 0px;
+    height: 100%;
     overflow-x: hidden;
     font-family: var(--poppin);
     color: var(--slate-900);
@@ -98,29 +96,28 @@ body{
 }
 
 .mobileNav{
-    width: 100%;
+    width: 100vw;
     height: auto;
     padding:0px;
     margin: 0px auto;
     position: fixed;
     left: 0px;
-    bottom: -5px;
+    bottom: 0px;
     background: var(--slate-50);
-    box-shadow: 0px 0px 4px #000;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     overflow: hidden;
 }
 
 
 .mobileNav .main{
-    width: 100vmin;
-    max-height: 70px;
+    width: 100%;
+    height: 70px;
     
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0px auto;
-    padding: 0px;
+    padding: 0 12px;
 }
 
 .mobileNav .main .li{
@@ -132,14 +129,12 @@ body{
     transition:all .2s ease;
     padding: 10px;
     cursor: pointer;
-    margin-top: 10px;
-    margin-right: 20px;
+    margin-bottom: -15px;
 }
 
 
 .mobileNav .main li .icon{
     font-size: 20px;
-    padding: 15px;
     transition:all .2s ease;
 }
 
@@ -159,8 +154,6 @@ body{
 }
 
 .mobileNav .main .li:hover > .icon{
-    background: var(--slate-100);
-    border-radius: 50%;
     color: var(--blue1);
     transition:all .2s ease;
 }
@@ -176,7 +169,8 @@ body{
     transition:all .2s ease;
     padding: 10px;
     cursor: pointer;
-    margin-top: 10px;
+    position: relative;
+    gap: 5px;
 }
 
 .mobileNav .main .active > label{
@@ -186,13 +180,21 @@ body{
     transform: translateY(-2px);
     color: var(--blue1);
 }
-
 .mobileNav .main .active > .icon{
-    padding: 7px;
-    background: var(--slate-100);
-    border-radius: 50%;
     color: var(--blue1);
     transition:all .2s ease;
+}
+.mobileNav .main li.active::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 8px;
+    transform: translateX(-50%);
+    width: 26px;
+    height: 26px;
+    background: #edf0ff;
+    border-radius: 50%;
+    z-index: -1;
 }
 
 
@@ -241,14 +243,14 @@ body{
 }
 
 .intro .circleA .langImgA{
-    width: 10vmin;
+    width: 8vmin;
     padding: 12px;
     position: absolute;
-    top: 10px;
-    right: 10px;
-    background: var(--slate-200);
+    top: -35px;
+    right: -25px;
+    background: var(--slate-100);
     border-radius: 50%;
-    box-shadow: 0px 0px 15px var(--slate-100);
+    box-shadow: 0px 0px 15px var(--slate-300);
     z-index: 100;
     animation: cylceA 10s linear infinite;
     transition: all .2s ease;
@@ -269,14 +271,14 @@ body{
 
 
 .intro .circleB .langImgB{
-    width: 20vmin;
+    width: 15vmin;
     padding: 15px;
     position: absolute;
-    right: 20px;
-    bottom: -50px;
-    background: var(--slate-200);
+    left: -90px;
+    bottom: -90px;
+    background: var(--slate-100);
     border-radius: 50%;
-    box-shadow: 0px 0px 15px var(--slate-100);
+    box-shadow: 0px 0px 15px var(--slate-300);
     z-index: 100;
     animation: cylceB 10s linear infinite;
     transition: all .2s ease;
@@ -297,14 +299,14 @@ body{
 }
 
 .intro .circleC .langImgC{
-    width: 15vmin;
+    width: 11vmin;
     padding: 15px;
     position: absolute;
-    left: -50px;
-    top: 100px;
-    background: var(--slate-200);
+    left: 15px;
+    bottom: -125px;
+    background: var(--slate-100);
     border-radius: 50%;
-    box-shadow: 0px 0px 15px var(--slate-100);
+    box-shadow: 0px 0px 15px var(--slate-300);
     z-index: 100;
     animation: cylceC 10s linear infinite;
     transition: all .2s ease;
@@ -321,6 +323,8 @@ body{
 .intro .langImgC:hover{ 
     filter: grayscale(0%);
 } 
+
+.break-keep {word-break: keep-all;}
 
 
 @media(max-width: 700px) {

@@ -6,7 +6,7 @@ import { ResponsiveNavbar } from '../components/Navbar'
 import { FaStar, FaArrowRight, FaQuoteRight } from "react-icons/fa"
 import { AiFillGithub } from "react-icons/ai"
 
-import { projects } from "../data/projects.json"
+import projects from "../data/projects.json"
 import userInfo from "../data/usersInfo.json"
 
 
@@ -30,7 +30,7 @@ function Projects() {
             <div id="top-head" className="relative w-full h-[35vh] bg-dark-400 p-3 flex flex-col items-start justify-start ">
                 <Container className="relative">
                     <Link href={"/"}>
-                        <FaArrowLeft className='px-3 py-1 text-white-200 text-[35px] bg-dark-100 rounded-[4px] cursor-pointer' />
+                        <a><FaArrowLeft className='px-3 py-1 text-white-200 text-[35px] bg-dark-100 rounded-[4px] cursor-pointer' /></a>
                     </Link>
                     <br />
                     <h1 className="text-[50px] font-bold ">
@@ -41,7 +41,7 @@ function Projects() {
                     </p>
                 </Container>
             </div>
-            <div className="w-screen h-auto ">
+            <div className="w-full h-auto ">
                 <br />
                 <Container>
                     <div id="head" className="w-full py-2 mx-auto flex flex-row justify-start items-start ">
@@ -115,7 +115,7 @@ function ProjectsCard() {
                                                     <a href={list.project_url} className={`text-white-200 mr-[10px] hover:underline hover:text-white-100`}>
                                                         View
                                                     </a>
-                                                    <ion-icon name="arrow-forward-outline" className={`ml-[10px] p-[10px]`}></ion-icon>
+                                                                                                                <IoArrowForwardOutline className={`p-[10px]`} />
                                                 </>
                                                 :
                                                 ""

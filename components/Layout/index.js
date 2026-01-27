@@ -18,8 +18,7 @@ function Layout({ children }) {
   }, [windowWidth])
 
   return (
-    <div className={`w-screen h-screen`}>
-      <DomHead />
+    <div className={`w-full h-full`}>
       <Header>
         <NavBar />
       </Header>

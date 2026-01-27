@@ -4,57 +4,57 @@ import Link from "next/link"
 import { FaGithub, FaTwitter } from "react-icons/fa"
 import { FiMail } from "react-icons/fi"
 import usersInfo from "../../data/usersInfo.json"
-import { socials } from "../../data/socials.json"
+import socials from "../../data/socials.json"
 import avatar from "../../public/images/avatar/avatar.png"
+import { IoCubeOutline, IoHomeOutline, IoMailOutline, IoPersonOutline } from "react-icons/io5"
 
 function NavBar() {
 
+    const [scrolled, setScrolled] = useState(false)
+    useEffect(() => {
+        const handleScroll = () => {
+        setScrolled(window.scrollY > 0)
+        }
+
+        window.addEventListener("scroll", handleScroll)
+        handleScroll() // 초기 체크
+
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, [])
 
     return (
         <React.Fragment>
-            <div className={`navbar sticky top-0 h-auto w-full mx-auto md:w-[80%] flex align-center justify-between py-[20px]`}>
-                <div className={`left w-auto flex align-start items-start justify-start px-[10px] `}>
+            <div className={`navbar fixed top-0 h-auto w-screen left-0 px-3 md:px-[10%] flex align-center justify-between py-[20px] transition-all duration-300 ${scrolled ? "bg-white/60 shadow-sm backdrop-blur-md z-10" : ""}`}>
+                <div className={`left w-auto flex align-start items-start justify-start`}>
                     <p className={`font-extrabold mr-[20px]`}>{usersInfo.github_username.charAt(0).toUpperCase() + usersInfo.github_username.slice(1)}</p>
 
                     <ul className={`relative ml-[10px] hidden md:flex`}>
-                        <li className={`mt-[5px] mr-[10px] mb-[0px] ml-[10px] transition-all hover:text-green-100 hover:font-extrabold cursor-pointer text-[12px]`}>
-                            <Link href="/">Home</Link>
+                        <li className={`mt-[5px] mr-[10px] mb-[0px] ml-[10px] transition-all hover:text-blue-100 hover:font-extrabold cursor-pointer text-sm`}>
+                            <Link href="/"><a>Home</a></Link>
                         </li>
-                        <li className={`mt-[5px] mr-[10px] mb-[0px] ml-[10px] transition-all hover:text-green-100 hover:font-extrabold cursor-pointer text-[12px]`}>
-                            <Link href="/about">About</Link>
+                        <li className={`mt-[5px] mr-[10px] mb-[0px] ml-[10px] transition-all hover:text-blue-100 hover:font-extrabold cursor-pointer text-sm`}>
+                            <Link href="/about"><a>About</a></Link>
                         </li>
-                        <li className={`mt-[5px] mr-[10px] mb-[0px] ml-[10px] transition-all hover:text-green-100 hover:font-extrabold cursor-pointer text-[12px]`}>
-                            <Link href="/projects">Projects</Link>
+                        <li className={`mt-[5px] mr-[10px] mb-[0px] ml-[10px] transition-all hover:text-blue-100 hover:font-extrabold cursor-pointer text-sm`}>
+                            <Link href="/projects"><a>Projects</a></Link>
                         </li>
-                        <li className={`mt-[5px] mr-[10px] mb-[0px] ml-[10px] transition-all hover:text-green-100 hover:font-extrabold cursor-pointer text-[12px]`}>
-                            <Link href="#contact">Contact</Link>
+                        <li className={`mt-[5px] mb-[0px] ml-[10px] transition-all hover:text-blue-100 hover:font-extrabold cursor-pointer text-sm`}>
+                            <Link href="/#contact"><a>Contact</a></Link>
                         </li>
                     </ul>
                 </div>
                 <div className={`relative right w-[50vmin] hidden md:flex `}>
-                    <ul className={`flex flex-row align-center justify-between items-center`}>
-                        {socials["twitter"] !== "" &&
-                            <a href={socials["twitter"]} target="_blank" className={`w-[100px] text-[17px] flex flex-row align-center justify-center items-center decoration-none  hover:text-white `}>
-                                <FaTwitter className={`mr-[10px] `} />
-                                <small>Twitter</small>
-                            </a>}
-
-                        {socials["github"] !== "" &&
-                            <a href={socials["github"]} target="_blank" className={`w-[100px] text-[17px] flex flex-row align-center justify-center items-center decoration-none  hover:text-white `}>
-                                <FaGithub className={`mr-[10px] `} />
-                                <small>Github</small>
-                            </a>}
-
-                        {socials["email"] !== "" &&
-                            <a href={`mailto:${socials["email"]}`} className={`w-[100px] text-[17px] flex flex-row align-center justify-center items-center decoration-none  hover:text-white `}>
+                    <div className={`flex flex-row align-center justify-end items-center w-full`}>
+                            {socials["email"] !== "" &&
+                            <a href={`mailto:${socials["email"]}`} className={`w-[100px] text-[17px] flex flex-row align-center justify-end items-center decoration-none  hover:text-white `}>
                                 <FiMail className={`mr-[10px] icon mail`} />
                                 <small>Email</small>
                             </a>}
 
-                    </ul>
+                    </div>
                 </div>
-                <div className={`absolute top-[15px] right-[25px] md:hidden `}>
-                    <img src={avatar.src} className={` w-[40px] rounded-[50%] border-[2px] border-solid border-green-100 bg-dark-100 `} />
+                <div className={`absolute top-[15px] right-[12px] md:hidden `}>
+                    <img src={'/images/me.png'} className={` w-[40px] h-[40px] rounded-[50%] border-[2px] border-solid border-blue-100 object-cover `} />
                 </div>
             </div>
         </React.Fragment>
@@ -87,13 +87,13 @@ export function ResponsiveNavbar({ activePage, pageName = "" }) {
             <div className={`main`}>
                 <li className={active === "home" ? `active` : `li`} data-name="home" onClick={handleActive}>
                     <Link href="/">
-                        <ion-icon name="home-outline" class={`icon`}></ion-icon>
+                        <a><IoHomeOutline className={`icon`} /></a>
                     </Link>
                     <label className={`label`}>Home</label>
                 </li>
                 <li className={active === "projects" ? `active` : `li`} data-name="projects" onClick={handleActive}>
                     <Link href="/projects">
-                        <ion-icon name="cube-outline" class={`icon`}></ion-icon>
+                        <a><IoCubeOutline className={`icon`} /></a>
                     </Link>
                     <label className={`label`}>
                         Projects
@@ -101,13 +101,13 @@ export function ResponsiveNavbar({ activePage, pageName = "" }) {
                 </li>
                 <li className={active === "about" ? `active` : `li`} data-name="about" onClick={handleActive}>
                     <Link href="/about">
-                        <ion-icon name="person-outline" class={`icon`}></ion-icon>
+                        <a><IoPersonOutline className={`icon`} /></a>
                     </Link>
                     <label className={`label`}>About</label>
                 </li>
-                <li className={active === "contact" ? `active mr-5` : `li mr-5`} data-name="contact" onClick={handleActive}>
+                <li className={active === "contact" ? `active` : `li`} data-name="contact" onClick={handleActive}>
                     <Link href={pageName === "" ? "#contact" : "/#contact"}>
-                        <ion-icon name="mail-outline" class={`icon`}></ion-icon>
+                        <a><IoMailOutline className={`icon`} /></a>
                     </Link>
                     <label className={`label`}>Contact</label>
                 </li>

@@ -1,1 +1,36 @@
-{"skill":[{"name":"Frontend Engineering","description":"Development of beautiful and unique user interfaces.","projects_completed":"60"},{"name":"Backend Development","description":"Development of complex and scalable backend architecture.","projects_completed":"100"},{"name":"Database Design","description":"Development and Designing of complex scalable database achitecture.","projects_completed":"30"}]}
+{"skill":
+    [
+        {
+            "name":"주식회사 디엑스랩스",
+            "job" : "프론트앤드",
+            "position" : "매니저",
+            "period":"2024.05 - 2026.01",
+            "calculation" : "1년 9개월",
+            "description" : "웹 개발 에이전시에서 카페24 사이트 개발, 웹앱 제작, 사이트 유지보수 등의 다양한 업무를 맡았습니다."
+        },
+        {
+            "name":"썸센스(SomesenseCo.,Ltd.)",
+            "job" : "디자인(컨텐츠), 퍼블리셔",
+            "position" : "사원",
+            "period":"2023.07 - 2024.04",
+            "calculation" : "10개월",
+            "description" : "브랜드 매니지먼트 유통회사로, 카페24 디자인셋팅, SNS 디자인 프리랜서로 근무했습니다."
+        },
+        {
+            "name":"주식회사 에스크라운",
+            "job" : "디자인(컨텐츠, 웹), 퍼블리싱",
+            "position" : "주임",
+            "period":"2022.06 - 2023.04",
+            "calculation" : "11개월",
+            "description" : "웹 & 영상 에이전시에서 퍼블리셔 겸 컨텐츠 디자이너로 근무했습니다."
+        },
+        {
+            "name":"피코코스메틱",
+            "job" : "디자인(제품, 패키지, 프로모션)",
+            "position" : "사원",
+            "period":"2020.03 - 2021.12",
+            "calculation" : "1년 10개월",
+            "description" : "화장품 인하우스에서 디자인을 전담하여 작업했습니다."
+        }
+    ]
+}
