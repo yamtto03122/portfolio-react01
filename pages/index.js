@@ -17,7 +17,7 @@ export default function HomePage() {
                     <Intro />
                     <Projects />
                 </Container>
-                <Quote />
+                {/* <Quote /> */}
                 <Contact />
                 <Footer />
             </Layout>

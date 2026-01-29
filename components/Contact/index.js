@@ -14,17 +14,19 @@ function Contact() {
     const { contactActive, closeContactForm, openContactForm } = useContext(DataContext)
 
     return (
-        <div className="w-full bg-dark-300 h-auto p-2 md:p-5 ">
+        <div className="w-full bg-blue-100 h-auto px-4 py-14 md:py-20 md:px-[10%] ">
             <Container>
-                <div className="w-full h-auto flex flex-col items-start justify-start py-[50px] mb-[20px] md:py-5 ">
-                    <h1 data-aos="fade-right" className="text-[30px] font-thin ">
-                        Let Make The Impossible <span className="text-green-200 font-extrabold">Possible.</span>
+                <div className="w-full h-auto flex flex-col items-start justify-start ">
+                    <h1 data-aos="fade-right" className="text-2xl md:text-3xl text-white leading-normal">
+                        함께 고민하고, 함께 성장하며<br/>
+                        <span className="text-green-200 font-extrabold">가치를 만들어갈 팀</span>을 찾고 있습니다.
                     </h1>
                     <br />
                     <a id='contact'></a>
-                    <p data-aos="fade-right" className=" text-[20px] ">
-                        Start by <span className=" text-green-200 underline cursor-pointer " onClick={openContactForm}>saying hi</span>
+                    <p data-aos="fade-right" className=" text-lg text-white ">
+                        언제든 부담 없이 편하게 연락 주세요!
                     </p>
+                    <span data-aos="fade-right" className=" text-green-200 underline cursor-pointer " onClick={openContactForm}>Saying Hi! 👋🏻</span>
                 </div>
             </Container>
 
@@ -34,7 +36,7 @@ function Contact() {
 
             <div id="floating-btn" className="fixed bottom-20 right-5 z-[100] flex flex-col items-center justify-center md:bottom-10 ">
                 <span className={`flex flex-col items-center justify-center p-[12px] bg-dark-400 rounded-[50%] border-green-2003 transition-all scale-[.80] hover:scale-[.95] cursor-pointer `}>
-                    <AiFillMessage className='text-[30px] text-green-200 ' onClick={openContactForm} />
+                    <AiFillMessage className='text-[30px] text-white ' onClick={openContactForm} />
                 </span>
             </div>
 

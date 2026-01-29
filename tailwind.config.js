@@ -34,7 +34,12 @@ module.exports = {
           800: "#140e32"
         }
 
-      }
+      },
+      backgroundImage: {
+        'hero-gradient':
+          'linear-gradient(0deg,rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%)',
+      },
+
     },
   },
   plugins: [],

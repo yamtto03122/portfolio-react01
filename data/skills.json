@@ -1,36 +1,87 @@
 {"skill":
-    [
+{
+    "language" : [
         {
-            "name":"주식회사 디엑스랩스",
-            "job" : "프론트앤드",
-            "position" : "매니저",
-            "period":"2024.05 - 2026.01",
-            "calculation" : "1년 9개월",
-            "description" : "웹 개발 에이전시에서 카페24 사이트 개발, 웹앱 제작, 사이트 유지보수 등의 다양한 업무를 맡았습니다."
+            "name":"HTML5",
+            "icon" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+            "description" : "시멘틱 태그 기반의 구조적인 마크업을 작성하고, 접근성과 가독성을 고려한 HTML을 구현할 수 있습니다."
         },
         {
-            "name":"썸센스(SomesenseCo.,Ltd.)",
-            "job" : "디자인(컨텐츠), 퍼블리셔",
-            "position" : "사원",
-            "period":"2023.07 - 2024.04",
-            "calculation" : "10개월",
-            "description" : "브랜드 매니지먼트 유통회사로, 카페24 디자인셋팅, SNS 디자인 프리랜서로 근무했습니다."
+            "name":"CSS",
+            "icon" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+            "description" : "Flexbox와 Grid를 활용해 레이아웃을 구성하고, 반응형 UI와 유지보수를 고려한 CSS를 작성할 수 있습니다."
         },
         {
-            "name":"주식회사 에스크라운",
-            "job" : "디자인(컨텐츠, 웹), 퍼블리싱",
-            "position" : "주임",
-            "period":"2022.06 - 2023.04",
-            "calculation" : "11개월",
-            "description" : "웹 & 영상 에이전시에서 퍼블리셔 겸 컨텐츠 디자이너로 근무했습니다."
+            "name":"Javascript",
+            "icon" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+            "description" : "ES6+ 문법을 활용하여 코드를 작성 할 수 있습니다."
         },
         {
-            "name":"피코코스메틱",
-            "job" : "디자인(제품, 패키지, 프로모션)",
-            "position" : "사원",
-            "period":"2020.03 - 2021.12",
-            "calculation" : "1년 10개월",
-            "description" : "화장품 인하우스에서 디자인을 전담하여 작업했습니다."
+            "name":"JQuery",
+            "icon" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg",
+            "description" : "DOM 제어, 이벤트 처리, AJAX 통신을 통해 동적인 UI를 구현할 수 있습니다."
+        },
+        {
+            "name":"SCSS",
+            "icon" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg",
+            "description" : "프론트앤드 교육 이수 과정 중 학습했습니다."
+        }
+],
+"frontEnd" : [
+        
+        {
+            "name":"React",
+            "icon" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+            "description" : "기본 훅(useState, useEffect 등) 및 React Query(useQuery, useMutation 등)을 활용 할 수 있습니다."
+        },
+        {
+            "name":"Next.JS",
+            "icon" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+            "description" : "상황별로 SSG, SSR, CSR를 활용할 수 있습니다."
+        },
+        {
+            "name":"Axios",
+            "icon" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain.svg",
+            "description" : "API 호출을 위해 Axios를 사용하고, async/await 기반으로 비동기 데이터 흐름을 처리했습니다."
+        },
+        {
+            "name":"Laravel",
+            "icon" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
+            "description" : "Laravel 환경에서 Blade 기반 화면과 API 데이터를 연동하며 프론트엔드 개발을 진행했습니다."
+        },
+        {
+            "name":"TailwindCSS",
+            "icon" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+            "description" : "최근 즐겨 사용하고 있습니다. 프로젝트에 적용한 경험이 있습니다."
+        }
+    ],
+    "etc" : [
+
+        {
+            "name":"Git",
+            "icon" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+            "description" : "코드 저장과 버전 기록을 위해 사용했습니다."
+        },
+        {
+            "name":"Github",
+            "icon" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+            "description" : "외부 저장과 협업을 위해 사용하였습니다."
+        },
+        {
+            "name":"Figma",
+            "icon" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
+            "description" : "디자인 경험을 살려 UI를 구현할 수 있습니다."
+        },
+        {
+            "name":"Photoshop",
+            "icon" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg",
+            "description" : "웹·콘텐츠 제작을 위한 이미지 편집 및 보정 작업을 수행할 수 있습니다."
+        },
+        {
+            "name":"Illustrator",
+            "icon" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-original.svg",
+            "description" : "아이콘, 그래픽 요소 제작 등 벡터 기반 디자인 작업을 수행할 수 있습니다."
         }
     ]
+}
 }

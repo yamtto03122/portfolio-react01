@@ -61,15 +61,15 @@ function About() {
             <Container>
                 <NavBar />
             </Container>
-            <div id="top-head" className=" w-full pt-[70px] px-[10%] h-[25vh] bg-blue-50 p-3 flex flex-col items-start justify-start ">
+            <div id="top-head" className=" w-full pt-[70px] px-4 md:px-[10%] h-[25vh] bg-blue-50 p-3 flex flex-col items-start justify-start ">
                 <Container className="">
                     <Link href={"/"}>
-                        <a><FaArrowLeft className='px-3 py-1 text-white text-[35px] bg-dark-100 rounded-[4px] cursor-pointer' /></a>
+                        <a><FaArrowLeft className='p-2 md:p-3 text-white text-[30px] md:text-[35px] bg-dark-100 rounded-[4px] cursor-pointer mb-3' /></a>
                     </Link>
-                    <h1 className="text-[50px] font-bold ">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-3 ">
                         About
                     </h1>
-                    <p className="text-[15px] text-slate-400 ">
+                    <p className="text-sm md:text-base text-slate-400 ">
                         About Me.
                     </p>
                 </Container>
@@ -77,20 +77,21 @@ function About() {
 
             <div className="w-full h-auto ">
                 <Container>
-                    <div className="w-full md:px-[10%] h-auto flex flex-col items-center justify-between p-10 md:flex-row">
-                        <div className="w-full md:w-[50%] ">
-                            <div className="w-full h-[450px] bg-cover bg-center bg-no-repeat md:w-[350px] rounded-md" style={{
-                                backgroundImage: `url("/images/me.png")`
-                            }}></div>
+                    <div className="w-full md:px-[10%] h-auto flex flex-col items-center justify-between px-4 py-10 md:p-10 md:flex-row gap-7 md:gap-2">
+                        <div className="flex-1 w-full">
+                            <div className="w-full aspect-square md:h-[450px] bg-cover bg-center bg-no-repeat md:w-[30vw] rounded-md" style={{
+                                backgroundImage: `url("/images/me.png")`}}>
+
+                            </div>
                         </div>
-                        <div className="w-full md:w-[50%] ">
+                        <div className="flex-1 w-full">
                             <div className={`w-full h-auto relative mb-[30px] md:mb-0 md:top-0`}>
                                 <p className={`text-sm text-slate-500 mb-3`}>Introduce</p>
                                 <div className={`relative`}>
                                     <h1 className={`text-3xl font-bold mb-4`}>
                                         {userInfo.greeting_type}  I'm {userInfo.full_name}
                                     </h1>
-                                    <p className={`mb-5 text-base text-slate-600 italic px-3 py-2 bg-slate-50 border-l-[3px] border-solid border-l-blue-100 break-keep`}>
+                                    <p className={`mb-5 text-base text-slate-600 italic px-3 py-2 bg-blue-10 border-l-[3px] border-solid border-l-blue-100 break-keep`}>
                                         {userInfo.intro_tagline}
                                     </p>
                                     <p className={`text-sm mb-7 text-slate-500 break-keep`}>
@@ -102,63 +103,63 @@ function About() {
                                                 
                                 </div>
                                 <div className={`relative flex flex-col align-start items-start justify-start gap-4 w-full`}>
-                                    <div className="w-full flex items-center">
-                                        <div className={`w-[50%] mr-[20px] flex flex-row items-center justify-start`}>
-                                            <span className={` w-20 text-slate-400 text-xs `}>
+                                    <div className="w-full flex items-center gap-5">
+                                        <div className={`flex-1 flex flex-row items-center justify-start`}>
+                                            <span className={` w-[75px] md:w-20 text-slate-400 text-xs `}>
                                                 Name
                                             </span>
-                                            <h1 className={` text-base pt-[5px] pr-[10px] pb-0 pl-0 `}>
+                                            <h1 className={`  text-[15px] md:text-base pt-[5px]  `}>
                                                 김도영
                                             </h1>
                                         </div>
-                                        <div className={`w-[50%] mr-[20px] flex flex-row items-center justify-start`}>
-                                            <span className={` w-20 text-slate-400 text-xs `}>
+                                        <div className={`flex-1 flex flex-row items-center justify-start`}>
+                                            <span className={` w-[75px] md:w-20 text-slate-400 text-xs `}>
                                                 Birth date
                                             </span>
-                                            <h1 className={` text-base pt-[5px] pr-[10px] pb-0 pl-0 `}>
+                                            <h1 className={`  text-[15px] md:text-base pt-[5px]  `}>
                                                 1996.03.18
                                             </h1>
                                         </div>
                                     </div>
-                                    <div className="w-full flex items-center">
-                                        <div className={`flex-1 mr-[20px] flex flex-row items-center justify-start`}>
-                                            <span className={` w-20 text-slate-400 text-xs `}>
+                                    <div className="w-full flex items-center gap-5">
+                                        <div className={`flex-1 flex flex-row items-center justify-start`}>
+                                            <span className={` w-[75px] md:w-20 text-slate-400 text-xs `}>
                                                 Phone
                                             </span>
-                                            <h1 className={` text-base pt-[5px] pr-[10px] pb-0 pl-0 `}>
-                                                010-3155-3402
+                                            <h1 className={`  text-[15px] md:text-base pt-[5px]  `}>
+                                                010.3155.3402
                                             </h1>
                                         </div>
-                                        <div className={`flex-1 mr-[20px] flex flex-row items-center justify-start`}>
-                                            <span className={` w-20 text-slate-400 text-xs `}>
+                                        <div className={`flex-1 flex flex-row items-center justify-start`}>
+                                            <span className={` w-[75px] md:w-20 text-slate-400 text-xs `}>
                                                 MBTI
                                             </span>
-                                            <h1 className={` text-base pt-[5px] pr-[10px] pb-0 pl-0 `}>
+                                            <h1 className={`  text-[15px] md:text-base pt-[5px]  `}>
                                                 ISTP
                                             </h1>
                                         </div>
                                     </div>
-                                    <div className={`w-full mr-[20px] flex flex-row items-center justify-start`}>
-                                        <span className={` w-20 text-slate-400 text-xs `}>
+                                    <div className={`w-full flex flex-row items-center justify-start`}>
+                                        <span className={` w-[75px] md:w-20 text-slate-400 text-xs `}>
                                             Education
                                         </span>
-                                        <h1 className={` text-base pt-[5px] pr-[10px] pb-0 pl-0 `}>
+                                        <h1 className={`  text-[15px] md:text-base pt-[5px]  `}>
                                             남서울대학교 시각정보디자인학과 학사 졸업
                                         </h1>
                                     </div>
-                                    <div className={`w-full mr-[20px] flex flex-row items-center justify-start`}>
-                                        <span className={` w-20 text-slate-400 text-xs `}>
+                                    <div className={`w-full flex flex-row items-center justify-start`}>
+                                        <span className={` w-[75px] md:w-20 text-slate-400 text-xs `}>
                                             Address
                                         </span>
-                                        <h1 className={` text-base pt-[5px] pr-[10px] pb-0 pl-0 `}>
+                                        <h1 className={`  text-[15px] md:text-base pt-[5px]  `}>
                                             서울특별시 영등포구 대림동
                                         </h1>
                                     </div>
-                                    <div className={`w-full mr-[20px] flex flex-row items-center justify-start`}>
-                                        <span className={` w-20 text-slate-400 text-xs `}>
+                                    <div className={`w-full flex flex-row items-center justify-start`}>
+                                        <span className={` w-[75px] md:w-20 text-slate-400 text-xs `}>
                                             Email
                                         </span>
-                                        <h1 className={` text-base pt-[5px] pr-[10px] pb-0 pl-0 `}>
+                                        <h1 className={`  text-[15px] md:text-base pt-[5px]  `}>
                                             hell03122@naver.com
                                         </h1>
                                     </div>

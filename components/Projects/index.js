@@ -13,6 +13,7 @@ function Projects() {
     const [repo, setRepo] = useState([])
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null)
+    console.log(projects.projects)
 
     async function fetchRepos() {
         let res;
@@ -52,27 +53,28 @@ function Projects() {
     }, [])
 
     return (
-        <div className={`projectCont w-full mx-auto md:w-[80%] py-20 relative flex flex-col items-center justify-center`}>
+        <div className={`projectCont w-full px-4 md:px-[10%] py-20 relative flex flex-col items-center justify-center bg-blue-50`}>
 
-            <div className="flex flex-col justify-end items-center mb-10">
-                <Link href="/projects">
-                <a data-aos="zoom-in-up" className={`text-center text-blue-100 underline text-[14px]`}>All Projects</a>
-                </Link>
-                <div className={`w-full flex flex-row items-center justify-center`}>
-                    <span data-aos="zoom-in" className={`w-[100px] h-[2px] rounded-[30px] m-[20px] bg-blue-100 md:w-[120px]`}></span>
-                    <p data-aos="fade-up" className={`text-slate-600 text-lg font-extrabold`}>Projects</p>
-                    <span data-aos="zoom-in" className={`w-[100px] h-[2px] rounded-[30px] m-[20px] bg-blue-100 md:w-[120px]`}></span>
-                </div>
+                
+            <div className={`w-full flex flex-row items-center justify-center gap-5 mb-10`}>
+                <span data-aos="zoom-in" className={`flex-1 h-[2px] rounded-[30px] bg-blue-100 max-w-[80px] md:max-w-[120px]`}></span>
+                <p data-aos="fade-up" className={`text-3xl md:text-4xl font-extrabold`}>Projects</p>
+                <span data-aos="zoom-in" className={`flex-1 h-[2px] rounded-[30px] bg-blue-100 max-w-[80px] md:max-w-[120px]`}></span>
             </div>
             
 
-            <div className={`projects w-full grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-6`}>
+            <div className={`projects w-full grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6 mb-10`}>
                 {
-                    projects.length > 0 ?
-                        projects.slice(0, 6).map((list, i) => {
+                    projects.projects.length > 0 ?
+                        projects.projects.slice(0, 6).map((list, i) => {
                             return (
-                                <a href={list.project_url} data-aos="zoom-in" key={i} className={`box w-full h-auto bg-blue-50 rounded-md relative transition-all !opacity-[0.7] hover:!opacity-[1] overflow-hidden hover:shadow-md`}>
-                                    <div className="imgCont"></div>
+                                <a href={list.project_url} data-aos="zoom-in" key={i} className={`box w-full h-auto bg-white rounded-md relative transition-all md:!opacity-[0.75] md:hover:!opacity-[1] overflow-hidden shadow-md md:shadow-none md:hover:shadow-md`}>
+                                    <div className="imgCont relative">
+                                        <div className="h-1/2 absolute bottom-0 p-3 w-full bg-hero-gradient flex flex-col justify-end">
+                                            <p className="text-xs text-white/70 mb-0.5">{list.date}</p>
+                                            <p className={`text-base font-semibold text-white`}>{list.title === "" ? "Project Title" : list.title}</p>
+                                        </div>
+                                    </div>
                                     <style jsx>{`
                                         .imgCont{
                                             width: 100%;
@@ -83,18 +85,23 @@ function Projects() {
                                             background-position: center;
                                         }
                                     `}</style>
-                                    <div className={`w-full h-[calc(100%-190px)] p-[10px] flex flex-col justify-between gap-5`}>
-                                        <div className="w-full h-auto">
-                                            <p className={`text-lg text-slate-600 mb-2`}>{list.title === "" ? "Project Title" : list.title}</p>
-                                            <span className="text-sm">{list.description === "" ? "some dummy description" : list.description}</span>
+                                    <div className={`w-full h-[calc(100%-190px)] p-3 flex flex-col justify-between gap-4`}>
+                                        <div className="w-full">
+                                            <div className="flex items-center gap-2.5 text-xs text-slate-500 mb-1">
+                                                <p>{list.type}</p> <p className="text-slate-400">|</p> 
+                                                <p><span>기여</span> <span>{list.contribution}%</span></p>
+                                            </div>
+                                            <p className="text-base text-slate-800 break-keep mb-1.5">{list.sub_title === "" ? "some dummy description" : list.sub_title}</p>
+                                            <span className="text-sm text-slate-700 break-keep">{list.description === "" ? "some dummy description" : list.description}</span>
+                                            
                                         </div>
-                                        <div className="flex items-end justify-between gap-4">
+                                        <div className="flex items-end justify-between gap-3">
                                             <div className={`flex flex-wrap items-start justify-start gap-1`}>
                                                 {
                                                     list.tags.length > 0 ?
-                                                        list.tags.slice(0, 3).map((tag, i) => {
+                                                        list.tags.map((tag, i) => {
                                                             return (
-                                                                <span key={i} className={`text-[10px] py-[3px] px-[9px] bg-white rounded-[2px] text-slate-800`}>{tag}</span>
+                                                                <span key={i} className={`text-[10px] py-0.5 px-2 bg-blue-50 rounded-sm text-slate-700`}>{tag}</span>
                                                             )
                                                         })
                                                         :
@@ -108,7 +115,7 @@ function Projects() {
                                                             <p className={`text-slate-600 hover:underline hover:text-slate-800`}>
                                                                 View
                                                             </p>
-                                                            <IoArrowForwardOutline className={`p-[10px]`} />
+                                                            <IoArrowForwardOutline className={``} />
                                                         </>
                                                         :
                                                         ""
@@ -123,30 +130,12 @@ function Projects() {
                         ""
                 }
             </div>
+
+            <Link href="/projects">
+                <a data-aos="zoom-in-up" className={`text-lg flex items-center gap-2 w-fit border-[2px] border-solid border-blue-100 px-5 py-3 bg-dark-100 text-blue-50 rounded-full scale-[.90] hover:scale-[.95] transition-all`}>All Projects</a>
+            </Link>
         </div>
     )
 }
 
 export default Projects
-
-
-function StarRatings({ count = 1, size = 3, title = "star" }) {
-
-    return (
-        <>
-            {
-                title === "star" ?
-
-                    Array(1).fill(1).map((i) => {
-                        return (
-                            <FaStar key={i * Math.floor(Math.random() * 1000)} className={`text-blue-100 text-[${size}px] `} />
-                        )
-                    })
-                    :
-                    <AiFillGithub className={`text-blue-100 text-[${size}px] `} />
-            }
-            <small className="ml-2 text-slate-600 font-extrabold">{count}</small>
-            <small className="ml-2 text-slate-600">{title}</small>
-        </>
-    )
-}

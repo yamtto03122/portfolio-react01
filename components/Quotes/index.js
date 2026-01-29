@@ -7,14 +7,13 @@ import userInfo from "../../data/usersInfo.json"
 
 function Quote() {
     return (
-        <div className="w-full h-auto bg-dark-200 py-[50px]">
+        <div className="w-full h-auto bg-blue-10 py-20 px-4 md:px-[10%]">
             <Container>
-                <div className="head mx-auto flex flex-col items-center justify-center text-center md:items-center md:justify-start md:flex-row md:px-0">
-                    <h1 data-aos="fade-right" className="text-[35px] font-bold md:mr-[50px]">Favorite Quote</h1>
-                    <p data-aos="fade-left" className="text-[12px] text-white-200 ">My favorite motivational quote.</p>
+                <div className="head mx-auto flex flex-col items-center justify-center text-center mb-10 md:items-center md:justify-start md:flex-row md:px-0">
+                    <h1 data-aos="fade-right" className="text-3xl md:text-4xl font-extrabold mb-2.5 md:mb-0 md:mr-[50px]">Favorite Quote</h1>
+                    <p data-aos="fade-left" className="text-sm md:text-base text-white-200 ">My favorite motivational quote.</p>
                 </div>
-                <div id="quote-cont" className='w-full h-auto mt-[100px] relative p-2 md:p-0'>
-
+                <div id="quote-cont" className='w-full h-auto relative'>
                     <QuoteCard />
                 </div>
             </Container>
@@ -27,15 +26,14 @@ export default Quote
 function QuoteCard() {
 
     return (
-        <div id="t-box" className='relative w-full h-auto space-2 bg-dark-300 px-[30px] py-[20px] md:px-[80px] md:py-[50px] rounded-lg overflow-hidden'>
-            <FaQuoteRight data-aos="fade-left" className='absolute top-[20px] right-[25px] text-[35px] text-white-300 opacity-[.3]' />
+        <div id="t-box" className='relative w-full h-auto space-2 bg-white p-6 md:px-12 md:py-10 rounded-lg overflow-hidden'>
+            <FaQuoteRight data-aos="fade-left" className='absolute top-[20px] right-[25px] text-2xl md:text-[35px] text-slate-300 opacity-[.3]' />
             <div id="ratings" className="w-full flex flex-row items-center justify-start">
                 <StarRatings count={10} size={10} />
-                <small className='ml-2 text-white-300 font-bold'>{userInfo.github_username.charAt(0).toUpperCase() + userInfo.github_username.slice(1)}</small>
+                <small className='ml-2 text-slate-500 font-bold'>{userInfo.github_username.charAt(0).toUpperCase() + userInfo.github_username.slice(1)}</small>
             </div>
-            <br />
-            <div id="body" className="w-full flex flex-row items-start justify-start mt-4">
-                <p data-aos="zoom-in-up">
+            <div id="body" className="w-full flex flex-row items-start justify-start mt-4 md:mt-8">
+                <p data-aos="zoom-in-up" className="text-sm md:text-base">
                     {userInfo.favorites_quote}
                 </p>
             </div>
@@ -50,7 +48,7 @@ function StarRatings({ count = 1, size = 3 }) {
             {
                 Array(count).fill(count).map((i) => {
                     return (
-                        <FaStar key={i} className={`text-green-200 text-[${size}px] `} />
+                        <FaStar key={i} className={`text-blue-100 text-[${size}px] `} />
                     )
                 })
 

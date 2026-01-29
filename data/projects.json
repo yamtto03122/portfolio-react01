@@ -1,53 +1,137 @@
 {
     "projects":[
-        {
-            "title": "BaayMax",
-            "imageUrl": "https://github.com/Benrobo/baaymax-cli/raw/master/readmeImg/cli.png?raw=true",
-            "project_url": "https://github.com/Benrobo/baaymax",
-            "description": "Generate developer portfolio site from your github profile.",
-            "tags": [ "react", "nodejs" ]
-        },
-        {
-            "title": "Babcock Ride",
-            "imageUrl": "https://raw.githubusercontent.com/Benrobo/babcock-uber/main/readmeImg/babcock-profile.png",
-            "project_url": "https://github.com/Benrobo/babcock-uber",
-            "description": "Get a ride quickly as possible using this app meant for the babcock university.",
-            "tags": [ "react", "postgresql", "nodejs" ]
-        },
-        {
-            "title": "E-Workflow",
-            "imageUrl": "https://raw.githubusercontent.com/Benrobo/e-workflow-client/main/readmeImg/dashboard.png",
-            "project_url": "https://github.com/Benrobo/e-workflow-client",
-            "description": "Automate document submission within a school.",
-            "tags": [ "react", "postgresql", "nodejs" ]
-        },
-        {
-            "title": "Quickr",
-            "imageUrl": "https://raw.githubusercontent.com/Benrobo/quickr/main/readmeImg/quickr1.png",
-            "project_url": "https://github.com/Benrobo/quickr",
-            "description": "Generate unique resume / CV.",
-            "tags": [ "react", "nodejs" ]
-        },
-        {
-            "title": "PayRill",
-            "imageUrl": "https://camo.githubusercontent.com/b9b0a0e9957c3fe08d47cbacbd36dd87242837f5ce88f00ed9db4cd3da8fd3d9/68747470733a2f2f643131327936393861646975327a2e636c6f756466726f6e742e6e65742f70686f746f732f70726f64756374696f6e2f736f6674776172655f70686f746f732f3030322f3232312f3931352f64617461732f67616c6c6572792e6a7067",
-            "project_url": "https://github.com/Benrobo/payrill",
-            "description": "Ease Checkout Processes and Reduce queues in shopping stores application powered by Rapyd API.",
-            "tags": [ "react", "nodejs", "rapyd api" ]
-        },
-        {
-            "title": "RayPal",
-            "imageUrl": "https://camo.githubusercontent.com/db234641b926872b7e4cd67a3daae83c4e937295922e4176feacf83b0d1975b8/68747470733a2f2f6368616c6c656e6765706f73742d73332d6368616c6c656e6765706f73742e6e6574646e612d73736c2e636f6d2f70686f746f732f70726f64756374696f6e2f736f6674776172655f70686f746f732f3030322f3033362f3130312f64617461732f67616c6c6572792e6a7067",
-            "project_url": "https://github.com/Benrobo/Rapyd-Payment-app",
-            "description": "Payment Infrastructure application powered by Rapyd API.",
-            "tags": [ "react", "nodejs", "rapyd api" ]
+
+         {
+            "date" : "2025.05 - 2026.01",
+            "title": "우리의창고",
+            "sub_title": "홈페이지 & 웹앱 & 어드민 페이지 구축",
+            "imageUrl": "/images/wugo_thumb.png",
+            "project_url": "https://wugo.kr/",
+            "description": "시트지 시공 관련 커뮤니티 및 구인구직 개발, 기획, 디자인",
+            "type" : "반응형 웹, 웹앱",
+            "contribution" : "50",
+            "tags": [ "React", "Next.js", "JS", "TailwindCSS", "Ajax", "React Query", "Git", "GitLab" ]
         },
          {
-            "title": "Tymonial",
-            "imageUrl": "https://raw.githubusercontent.com/Benrobo/tymonial-app/main/github-img/formUI.png",
-            "project_url": "https://github.com/Benrobo/tymonial-app",
-            "description": "An easy way to collect users feedback into yout web app.",
-            "tags": [ "react", "nodejs", "linode server" ]
+            "date" : "2024.11 - 2024.12",
+            "title": "펫닥",
+            "sub_title": "회사 홈페이지 리뉴얼",
+            "imageUrl": "/images/petdoc_thumb.png",
+            "project_url": "https://petdoc.co.kr/",
+            "description": "원페이지 구조의 홈페이지 리뉴얼 작업",
+            "type" : "반응형 웹",
+            "contribution" : "90",
+            "tags": [ "React", "Next.js", "JS", "TailwindCSS", "Git" ]
+        },
+        {
+            "date" : "2024.06 - 2026.01",
+            "title": "포포즈",
+            "sub_title": "반려동물 장례 사이트 개발, 어드민 개발, 유지보수",
+            "imageUrl": "/images/fourpaws_thumb.png",
+            "project_url": "https://fourpaws.co.kr/",
+            "description": "ajax를 활용한 api 연동, api를 활용한 가까운 지점 찾기 및 사이즈 전체 리뉴얼",
+            "type" : "반응형 웹",
+            "contribution" : "45",
+            "tags": [ "jQuery", "JS", "Git", "Ajax", "Laravel", "Php" ]
+        },
+         {
+            "date" : "2024.07 - 2024.10",
+            "title": "제시뉴욕",
+            "sub_title": "카페24 쇼핑몰 개발",
+            "imageUrl": "/images/jessi_thumb.png",
+            "project_url": "https://jessinewyork.com/",
+            "description": "카페24 기본 스킨을 기반으로 홈페이지 전반적인 페이지 개발 및 카페24 모듈을 활용하여 게시판·상품 리스트 커스터마이징 및 관리 기능 구현",
+            "type" : "반응형 웹",
+            "contribution" : "40",
+            "tags": [ "jQuery", "Cafe24" ]
+        },
+         {
+            "date" : "2024.05 - 2026.01",
+            "title": "민화샵",
+            "sub_title": "카페24 쇼핑몰 개발, 유지보수",
+            "imageUrl": "/images/minhwa_thumb.png",
+            "project_url": "https://minhwashop.kr/",
+            "description": "카페24 기본 스킨을 기반으로 사이트 개발 및 카페24 모듈을 활용하여 게시판·상품 리스트 커스터마이징 및 관리 기능 구현, API를 활용한 장바구니 공유 페이지 개발 참여 및 유지보수",
+            "type" : "반응형 웹",
+            "contribution" : "30",
+            "tags": [ "jQuery", "Cafe24", "Cafe24 API" ]
+        },
+         {
+            "date" : "2023.09",
+            "title": "제네시스",
+            "sub_title": "제네시스 메인 페이지 클론 코딩",
+            "imageUrl": "/images/genesis_thumb.jpg",
+            "project_url": "https://yamtto03122.github.io/Genesis_Clone/",
+            "description": "리액트 기반 홈페이지 메인 클론 코딩",
+            "type" : "반응형 웹",
+            "contribution" : "100",
+            "tags": [ "React", "SCSS", "jQuery" ]
+        },
+         {
+            "date" : "2023.07",
+            "title": "CMS 사이트",
+            "sub_title": "Cash Management Service 디자인",
+            "imageUrl": "/images/cms_cover.jpg",
+            "project_url": "https://yamtto03122.github.io/web-porfolio/project/cms.Html",
+            "description": "UX/UI 설계 및 디자인",
+            "type" : "웹 디자인",
+            "contribution" : "100",
+            "tags": [ "Figma", "Photoshop" ]
+        },
+         {
+            "date" : "2023.07",
+            "title": "코스메틱 웹사이트",
+            "sub_title": "코스메틱 브랜드 웹 페이지 디자인",
+            "imageUrl": "/images/Cosmetics_thumb.jpg",
+            "project_url": "https://yamtto03122.github.io/web-porfolio/project/cosmetic.Html",
+            "description": "UX/UI 설계 및 디자인",
+            "type" : "웹 디자인",
+            "contribution" : "100",
+            "tags": [ "Figma", "Photoshop" ]
+        },
+         {
+            "date" : "2023.01 - 2023.02",
+            "title": "에스크라운 인트라넷",
+            "sub_title": "사내 근태관리 시스템 개발 참여",
+            "imageUrl": "/images/sc__thumb.png",
+            "project_url": "https://yamtto03122.github.io/sc_intranet/",
+            "description": "피그마를 이용해 UI 설계 및 반응형 구조 퍼블리싱 작업 및 로그인, 연차 승인 시스템, 캘린더, 야근수당 확인 개발",
+            "type" : "웹, 모바일웹",
+            "contribution" : "50",
+            "tags": [ "Figma", "jQuery", "JS" ]
+        },
+         {
+            "date" : "2022.11 - 2023.01",
+            "title": "퓨티플러스",
+            "sub_title": "템플릿 사이트 유저 & 어드민 페이지 개발 참여",
+            "imageUrl": "/images/peauty_thumb.png",
+            "project_url": "https://yamtto03122.github.io/peauty_user/",
+            "description": "전 페이지를 피그마로 리디자인하여 백엔드 개발 전 단계에서 하드코딩 기반 퍼블리싱 작업, 스와이퍼 & 모달(레이어 팝업) 등 인터랙션 기능 구현으로 사용자 접근성 개선 (어드민, 템플릿 검색, 리스트 페이지, 로그인, 마이페이지 개발)",
+            "type" : "웹",
+            "contribution" : "70",
+            "tags": [ "Figma", "jQuery", "JS" ]
+        },
+         {
+            "date" : "2022.07 - 2022.10",
+            "title": "(사)대한민국교육봉사단 마음톡톡",
+            "sub_title": "교육 사이트 개발 참여",
+            "imageUrl": "/images/maum_thumb.png",
+            "project_url": "https://www.maumtalktalk.co.kr/",
+            "description": "회사 소개, 게시판 구현, 강의 요청, 로그인, 마이페이지 개발",
+            "type" : "반응형 웹",
+            "contribution" : "30",
+            "tags": [ "jQuery", "JS" ]
+        },
+         {
+            "date" : "2022.07 - 2022.08",
+            "title": "포에버링",
+            "sub_title": "주얼리 브랜드 가맹점 문의 사이트 개발",
+            "imageUrl": "/images/bakum_thumb.png",
+            "project_url": "https://yamtto03122.github.io/web-porfolio/project/bakum.Html",
+            "description": "원페이지 구조의 홈페이지 레이아웃 디자인 및 퍼블리싱 작업과 스와이퍼, 탭, 앵커 스크롤 등 인터랙션 구현으로 사용자 경험 강화",
+            "type" : "웹",
+            "contribution" : "90",
+            "tags": [ "jQuery", "JS" ]
         }
     ]
 }

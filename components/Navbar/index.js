@@ -7,6 +7,7 @@ import usersInfo from "../../data/usersInfo.json"
 import socials from "../../data/socials.json"
 import avatar from "../../public/images/avatar/avatar.png"
 import { IoCubeOutline, IoHomeOutline, IoMailOutline, IoPersonOutline } from "react-icons/io5"
+import { useRouter } from "next/router"
 
 function NavBar() {
 
@@ -24,7 +25,7 @@ function NavBar() {
 
     return (
         <React.Fragment>
-            <div className={`navbar fixed top-0 h-auto w-screen left-0 px-3 md:px-[10%] flex align-center justify-between py-[20px] transition-all duration-300 ${scrolled ? "bg-white/60 shadow-sm backdrop-blur-md z-10" : ""}`}>
+            <div className={`navbar fixed top-0 h-auto w-screen left-0 px-4 md:px-[10%] flex align-center justify-between py-[20px] transition-all duration-300 ${scrolled ? "bg-white/60 shadow-sm backdrop-blur-md z-10" : ""}`}>
                 <div className={`left w-auto flex align-start items-start justify-start`}>
                     <p className={`font-extrabold mr-[20px]`}>{usersInfo.github_username.charAt(0).toUpperCase() + usersInfo.github_username.slice(1)}</p>
 
@@ -64,26 +65,48 @@ function NavBar() {
 export default NavBar
 
 export function ResponsiveNavbar({ activePage, pageName = "" }) {
-
+    const router = useRouter();
     const [active, setActive] = useState(activePage || "home")
 
-    function handleActive(e) {
-        let tgt = e.target.dataset;
-        let parent = e.target.parentElement.dataset;
+    useEffect(() => {
+        if (router.pathname === "/") setActive("home");
+        else if (router.pathname === "/projects") setActive("projects");
+        else if (router.pathname === "/about") setActive("about");
+        else if (router.pathname === "/#contact") setActive("contact");
+    }, [router.pathname]);
 
-        if (Object.entries(tgt).length === 0) {
-            if (Object.entries(parent).length > 0) {
-                let { name } = parent
-                setActive(name)
-            }
-            return
-        }
-        let { name } = tgt;
-        setActive(name)
+    function handleActive(e) {
+        setActive(e.currentTarget.dataset.name);
     }
 
+    const [scrolled, setScrolled] = useState(false)
+    useEffect(() => {
+  let prevScrollY = window.scrollY;
+
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+
+    // 아래로 스크롤 → true
+    if (currentScrollY > prevScrollY) {
+      setScrolled(true);
+    }
+    // 위로 스크롤 → false
+    else {
+      setScrolled(false);
+    }
+
+    prevScrollY = currentScrollY;
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
+
     return (
-        <div className={`mobileNav`}>
+        <div className={`mobileNav ${scrolled ? "active" : ""}`}>
             <div className={`main`}>
                 <li className={active === "home" ? `active` : `li`} data-name="home" onClick={handleActive}>
                     <Link href="/">
