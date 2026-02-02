@@ -74,7 +74,7 @@ function Projects() {
                             return (
                                 <a href={list.project_url} target="_blank" data-aos="zoom-in" key={i} className={`box w-full h-auto bg-white rounded-md relative transition-all md:!opacity-[0.75] md:hover:!opacity-[1] overflow-hidden md:shadow-none md:hover:shadow-md ${hideOnMobile ? "hidden md:block" : ""} ${isMobilePeek ? "h-[70px] md:h-auto pointer-events-none" : "shadow-md"} ${isDesktopPeek ? "md:h-[70px] pointer-events-none" : "h-auto"}`}>
                                     <div className={`imgCont relative w-full h-[190px] ${isMobilePeek ? "md:blur-0 blur-sm" : ""} ${isDesktopPeek ? "md:blur-sm" : ""}`}>
-                                        <div className="h-1/2 absolute bottom-0 p-3 w-full bg-hero-gradient flex flex-col justify-end">
+                                        <div className={`${isMobilePeek ? "hidden" : "flex"} h-1/2 absolute bottom-0 p-3 w-full bg-hero-gradient flex-col justify-end`}>
                                             <p className="text-xs text-white/70 mb-0.5">{list.date}</p>
                                             <p className={`text-base font-semibold text-white`}>{list.title === "" ? "Project Title" : list.title}</p>
                                         </div>
@@ -88,8 +88,8 @@ function Projects() {
                                         }
                                     `}</style>
 
-                                    <div className={`pointer-events-none absolute inset-0 bg-blue-50-gradient ${isDesktopPeek && isDesktopPeek ? "block" : isMobilePeek ? "block md:hidden" : isDesktopPeek ? "hidden md:block" : "hidden"}`}></div>
-                                    <div className={`w-full h-[calc(100%-190px)] p-3 flex flex-col justify-between gap-4`}>
+                                    <div className={`pointer-events-none absolute -bottom-[1px] inset-0 bg-blue-50-gradient ${isDesktopPeek && isMobilePeek ? "block" : isMobilePeek ? "block md:hidden" : isDesktopPeek ? "hidden md:block" : "hidden"}`}></div>
+                                    <div className={`${isDesktopPeek && isDesktopPeek ? "hidden" : "flex"} w-full h-[calc(100%-190px)] p-3 flex-col justify-between gap-4`}>
                                         <div className="w-full leading-tight">
                                             <div className="flex items-center gap-2.5 text-xs text-slate-500 mb-1">
                                                 <p>{list.type}</p> <p className="text-slate-400">|</p> 
