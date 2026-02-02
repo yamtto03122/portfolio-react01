@@ -131,8 +131,8 @@ function Projects() {
                 }
             </div>
 
-            <Link href="/projects">
-                <a data-aos="zoom-in-up" className={`text-lg flex items-center gap-2 w-fit border-[2px] border-solid border-blue-100 px-5 py-3 bg-dark-100 text-blue-50 rounded-full scale-[.90] hover:scale-[.95] transition-all`}>All Projects</a>
+            <Link href="/projects" data-aos="zoom-in-up" className={`text-lg flex items-center gap-2 w-fit border-[2px] border-solid border-blue-100 px-5 py-3 bg-dark-100 text-blue-50 rounded-full scale-[.90] hover:scale-[.95] transition-all`}>
+                All Projects
             </Link>
         </div>
     )

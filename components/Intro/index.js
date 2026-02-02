@@ -134,11 +134,9 @@ console.log(activeKey)
                             </h1>
                         </div>
                     </div>
-                    <Link href="/about">
-                        <a data-aos="zoom-in-up" className="text-base md:text-lg mt-14 flex items-center gap-2 w-fit border-[2px] border-solid border-blue-100 px-5 py-3 bg-dark-100 text-blue-50 rounded-full scale-[.90] hover:scale-[.95] transition-all ">
+                    <Link href="/about" data-aos="zoom-in-up" className="text-base md:text-lg mt-14 flex items-center gap-2 w-fit border-[2px] border-solid border-blue-100 px-5 py-3 bg-dark-100 text-blue-50 rounded-full scale-[.90] hover:scale-[.95] transition-all ">
                         More Profile
                         <FaArrowRight />
-                        </a>
                     </Link>
                     
                 </div>

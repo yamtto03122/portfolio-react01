@@ -64,7 +64,7 @@ function About() {
             <div id="top-head" className=" w-full pt-[70px] px-4 md:px-[10%] h-[25vh] bg-blue-50 p-3 flex flex-col items-start justify-start ">
                 <Container className="">
                     <Link href={"/"}>
-                        <a><FaArrowLeft className='p-2 md:p-3 text-white text-[30px] md:text-[35px] bg-dark-100 rounded-[4px] cursor-pointer mb-3' /></a>
+                        <FaArrowLeft className='p-2 md:p-3 text-white text-[30px] md:text-[35px] bg-dark-100 rounded-[4px] cursor-pointer mb-3' />
                     </Link>
                     <h1 className="text-4xl md:text-5xl font-bold mb-3 ">
                         About

@@ -31,16 +31,16 @@ function NavBar() {
 
                     <ul className={`relative ml-[10px] hidden md:flex`}>
                         <li className={`mt-[5px] mr-[10px] mb-[0px] ml-[10px] transition-all hover:text-blue-100 hover:font-extrabold cursor-pointer text-sm`}>
-                            <Link href="/"><a>Home</a></Link>
+                            <Link href="/">Home</Link>
                         </li>
                         <li className={`mt-[5px] mr-[10px] mb-[0px] ml-[10px] transition-all hover:text-blue-100 hover:font-extrabold cursor-pointer text-sm`}>
-                            <Link href="/about"><a>About</a></Link>
+                            <Link href="/about">About</Link>
                         </li>
                         <li className={`mt-[5px] mr-[10px] mb-[0px] ml-[10px] transition-all hover:text-blue-100 hover:font-extrabold cursor-pointer text-sm`}>
-                            <Link href="/projects"><a>Projects</a></Link>
+                            <Link href="/projects">Projects</Link>
                         </li>
                         <li className={`mt-[5px] mb-[0px] ml-[10px] transition-all hover:text-blue-100 hover:font-extrabold cursor-pointer text-sm`}>
-                            <Link href="/#contact"><a>Contact</a></Link>
+                            <Link href="/#contact">Contact</Link>
                         </li>
                     </ul>
                 </div>
@@ -110,13 +110,13 @@ export function ResponsiveNavbar({ activePage, pageName = "" }) {
             <div className={`main`}>
                 <li className={active === "home" ? `active` : `li`} data-name="home" onClick={handleActive}>
                     <Link href="/">
-                        <a><IoHomeOutline className={`icon`} /></a>
+                        <IoHomeOutline className={`icon`} />
                     </Link>
                     <label className={`label`}>Home</label>
                 </li>
                 <li className={active === "projects" ? `active` : `li`} data-name="projects" onClick={handleActive}>
                     <Link href="/projects">
-                        <a><IoCubeOutline className={`icon`} /></a>
+                        <IoCubeOutline className={`icon`} />
                     </Link>
                     <label className={`label`}>
                         Projects
@@ -124,13 +124,13 @@ export function ResponsiveNavbar({ activePage, pageName = "" }) {
                 </li>
                 <li className={active === "about" ? `active` : `li`} data-name="about" onClick={handleActive}>
                     <Link href="/about">
-                        <a><IoPersonOutline className={`icon`} /></a>
+                        <IoPersonOutline className={`icon`} />
                     </Link>
                     <label className={`label`}>About</label>
                 </li>
                 <li className={active === "contact" ? `active` : `li`} data-name="contact" onClick={handleActive}>
                     <Link href={pageName === "" ? "#contact" : "/#contact"}>
-                        <a><IoMailOutline className={`icon`} /></a>
+                        <IoMailOutline className={`icon`} />
                     </Link>
                     <label className={`label`}>Contact</label>
                 </li>
