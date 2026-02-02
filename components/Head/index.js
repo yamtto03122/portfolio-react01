@@ -7,6 +7,22 @@ export default function DomHead({ pageName = "Home Page" }) {
         <Head>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <title>{userInfo.github_username} Portfolio - {pageName} </title>
+
+            {/* favicon */}
+            <link rel="icon" href="/favicon/favicon.ico" />
+            <link
+                rel="icon"
+                type="image/png"
+                sizes="32x32"
+                href="/favicon/favicon-32x32.png"
+            />
+            <link
+                rel="icon"
+                type="image/png"
+                sizes="16x16"
+                href="/favicon/favicon-16x16.png"
+            />
+            
             {/* meta tags begins */}
             {/* Primary Meta Tags */}
             <meta name="title" content="Doyoung Portfolio" />

@@ -19,11 +19,6 @@ function Footer() {
               &copy; {new Date().getFullYear()} All Right Reserved.
             </small>
           </div>
-          <div className="right">
-            <div className="socials flex flex-row items-center justify-center">
-              {socials["email"] !== "" && <SocialLink url={socials["email"]} children={<AiFillMail />} />}
-            </div>
-          </div>
 
         </div>
       </Container>

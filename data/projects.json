@@ -7,7 +7,7 @@
             "sub_title": "홈페이지 & 웹앱 & 어드민 페이지 구축",
             "imageUrl": "/images/wugo_thumb.png",
             "project_url": "https://wugo.kr/",
-            "description": "시트지 시공 관련 커뮤니티 및 구인구직 개발, 기획, 디자인",
+            "description": "플루터를 활용하여 빌드한 시트지 시공 관련 웹앱의 커뮤니티 및 구인구직 개발, 기획, 디자인",
             "type" : "반응형 웹, 웹앱",
             "contribution" : "50",
             "tags": [ "React", "Next.js", "JS", "TailwindCSS", "Ajax", "React Query", "Git", "GitLab" ]
@@ -18,7 +18,7 @@
             "sub_title": "회사 홈페이지 리뉴얼",
             "imageUrl": "/images/petdoc_thumb.png",
             "project_url": "https://petdoc.co.kr/",
-            "description": "원페이지 구조의 홈페이지 리뉴얼 작업",
+            "description": "리액트를 사용하여 원페이지 구조의 홈페이지 리뉴얼 작업",
             "type" : "반응형 웹",
             "contribution" : "90",
             "tags": [ "React", "Next.js", "JS", "TailwindCSS", "Git" ]
@@ -26,21 +26,76 @@
         {
             "date" : "2024.06 - 2026.01",
             "title": "포포즈",
-            "sub_title": "반려동물 장례 사이트 개발, 어드민 개발, 유지보수",
+            "sub_title": "홈페이지 & 어드민 개발, 전자 상담지 웹앱 개발, 리뉴얼, 유지보수",
             "imageUrl": "/images/fourpaws_thumb.png",
             "project_url": "https://fourpaws.co.kr/",
-            "description": "ajax를 활용한 api 연동, api를 활용한 가까운 지점 찾기 및 사이즈 전체 리뉴얼",
+            "description": "Ajax를 활용한 Api 연동, 전자 상담지 웹앱 개발, Api를 활용한 가까운 지점 찾기 및 사이트 전체적인 리뉴얼, 어드민 페이지의 프론트 작업",
             "type" : "반응형 웹",
             "contribution" : "45",
             "tags": [ "jQuery", "JS", "Git", "Ajax", "Laravel", "Php" ]
         },
          {
-            "date" : "2024.07 - 2024.10",
+            "date" : "2025.02 - 2025.03",
+            "title": "아트리즈",
+            "sub_title": "회사 홈페이지 구축",
+            "imageUrl": "/images/artrezz_thumb.png",
+            "project_url": "https://artrizz.kr/",
+            "description": "워드프레스를 기반으로 GSAP을 활용한 인플루언서 에이전시 홈페이지 신규 개발",
+            "type" : "반응형 웹",
+            "contribution" : "100",
+            "tags": [ "WordPress", "jQuery", "GSAP" ]
+        },
+         {
+            "date" : "2025.04",
+            "title": "엘빈즈",
+            "sub_title": "유지보수, 프로모션",
+            "imageUrl": "/images/alvins_thumb.png",
+            "project_url": "https://www.alvins.co.kr/",
+            "description": "홈페이지 유지보수 및 프로모션 프론트 개발 참여",
+            "type" : "웹, 모바일웹",
+            "contribution" : "20",
+            "tags": [ "jQuery", "JS" ]
+        },
+         {
+            "date" : "2025.03",
+            "title": "벳화점",
+            "sub_title": "카페24 쇼핑몰 유지보수",
+            "imageUrl": "/images/vet_thumb.png",
+            "project_url": "https://xn--tl3bw1s9pl.com/",
+            "description": "카페24 기본 스킨을 기반으로 카페24 모듈을 활용하여 게시판 · 상품 리스트 프론트 작업, 유지보수",
+            "type" : "반응형 웹",
+            "contribution" : "30",
+            "tags": [ "jQuery", "Cafe24" ]
+        },
+         {
+            "date" : "2025.01 - 2026.01",
+            "title": "까사 알렉시스",
+            "sub_title": "카페24 쇼핑몰 개발, 유지보수",
+            "imageUrl": "/images/casa_thumb.png",
+            "project_url": "https://casaalexis.cafe24.com/",
+            "description": "견적서 페이지 프론트 개발 참여 및 카페24 기본 스킨을 기반으로 카페24 모듈을 활용하여 게시판 · 상품 리스트 프론트 작업 및 관리 기능 구현, 유지보수",
+            "type" : "반응형 웹",
+            "contribution" : "30",
+            "tags": [ "jQuery", "Cafe24" ]
+        },
+         {
+            "date" : "2024.09 - 2025.11",
             "title": "제시뉴욕",
-            "sub_title": "카페24 쇼핑몰 개발",
+            "sub_title": "카페24 쇼핑몰 개발, 유지보수",
             "imageUrl": "/images/jessi_thumb.png",
             "project_url": "https://jessinewyork.com/",
-            "description": "카페24 기본 스킨을 기반으로 홈페이지 전반적인 페이지 개발 및 카페24 모듈을 활용하여 게시판·상품 리스트 커스터마이징 및 관리 기능 구현",
+            "description": "카페24 기본 스킨을 기반으로 홈페이지 전반적인 페이지 개발 및 카페24 모듈을 활용하여 게시판 · 상품 리스트 프론트 작업, 유지보수",
+            "type" : "반응형 웹",
+            "contribution" : "60",
+            "tags": [ "jQuery", "Cafe24" ]
+        },
+         {
+            "date" : "2024.07 - 2024.10",
+            "title": "카플",
+            "sub_title": "카페24 쇼핑몰 개발",
+            "imageUrl": "/images/carple_thumb.png",
+            "project_url": "https://www.carple.kr/",
+            "description": "제품 호환 체크 기능 프론트 개발 참여 및 카페24 기본 스킨을 기반으로 카페24 모듈을 활용하여 게시판 · 상품 리스트 프론트 작업",
             "type" : "반응형 웹",
             "contribution" : "40",
             "tags": [ "jQuery", "Cafe24" ]
@@ -51,7 +106,7 @@
             "sub_title": "카페24 쇼핑몰 개발, 유지보수",
             "imageUrl": "/images/minhwa_thumb.png",
             "project_url": "https://minhwashop.kr/",
-            "description": "카페24 기본 스킨을 기반으로 사이트 개발 및 카페24 모듈을 활용하여 게시판·상품 리스트 커스터마이징 및 관리 기능 구현, API를 활용한 장바구니 공유 페이지 개발 참여 및 유지보수",
+            "description": "API를 활용한 장바구니 공유 페이지 프론트 개발 참여 및 카페24 기본 스킨을 기반으로 사이트 개발 및 카페24 모듈을 활용하여 게시판 · 상품 리스트 프론트 작업 및 관리 기능 구현, 유지보수",
             "type" : "반응형 웹",
             "contribution" : "30",
             "tags": [ "jQuery", "Cafe24", "Cafe24 API" ]

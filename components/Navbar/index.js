@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 
 import Link from "next/link"
 import { FaGithub, FaTwitter } from "react-icons/fa"
-import { FiMail } from "react-icons/fi"
+import { FiInstagram, FiMail } from "react-icons/fi"
 import usersInfo from "../../data/usersInfo.json"
 import socials from "../../data/socials.json"
 import avatar from "../../public/images/avatar/avatar.png"
@@ -26,31 +26,34 @@ function NavBar() {
     return (
         <React.Fragment>
             <div className={`navbar fixed top-0 h-auto w-screen left-0 px-4 md:px-[10%] flex align-center justify-between py-[20px] transition-all duration-300 ${scrolled ? "bg-white/60 shadow-sm backdrop-blur-md z-10" : ""}`}>
-                <div className={`left w-auto flex align-start items-start justify-start`}>
-                    <p className={`font-extrabold mr-[20px]`}>{usersInfo.github_username.charAt(0).toUpperCase() + usersInfo.github_username.slice(1)}</p>
+                <div className={`left w-auto flex items-center justify-start gap-12`}>
+                    <p className={`font-extrabold text-2xl `}><span className="text-white relative before:w-8 before:h-8 before:bg-blue-100 before:rounded-full before:absolute before:-z-10 before:left-[45%] before:top-1/2 before:-translate-x-1/2 before:-translate-y-1/2">D</span>oYoung</p>
 
-                    <ul className={`relative ml-[10px] hidden md:flex`}>
-                        <li className={`mt-[5px] mr-[10px] mb-[0px] ml-[10px] transition-all hover:text-blue-100 hover:font-extrabold cursor-pointer text-sm`}>
+                    <ul className={`relative hidden md:flex gap-9`}>
+                        <li className={`transition-all hover:text-blue-100 hover:font-extrabold cursor-pointer text-base`}>
                             <Link href="/">Home</Link>
                         </li>
-                        <li className={`mt-[5px] mr-[10px] mb-[0px] ml-[10px] transition-all hover:text-blue-100 hover:font-extrabold cursor-pointer text-sm`}>
+                        <li className={`transition-all hover:text-blue-100 hover:font-extrabold cursor-pointer text-base`}>
                             <Link href="/about">About</Link>
                         </li>
-                        <li className={`mt-[5px] mr-[10px] mb-[0px] ml-[10px] transition-all hover:text-blue-100 hover:font-extrabold cursor-pointer text-sm`}>
+                        <li className={`transition-all hover:text-blue-100 hover:font-extrabold cursor-pointer text-base`}>
                             <Link href="/projects">Projects</Link>
                         </li>
-                        <li className={`mt-[5px] mb-[0px] ml-[10px] transition-all hover:text-blue-100 hover:font-extrabold cursor-pointer text-sm`}>
+                        <li className={`transition-all hover:text-blue-100 hover:font-extrabold cursor-pointer text-base`}>
                             <Link href="/#contact">Contact</Link>
                         </li>
                     </ul>
                 </div>
                 <div className={`relative right w-[50vmin] hidden md:flex `}>
-                    <div className={`flex flex-row align-center justify-end items-center w-full`}>
-                            {socials["email"] !== "" &&
-                            <a href={`mailto:${socials["email"]}`} className={`w-[100px] text-[17px] flex flex-row align-center justify-end items-center decoration-none  hover:text-white `}>
-                                <FiMail className={`mr-[10px] icon mail`} />
-                                <small>Email</small>
-                            </a>}
+                    <div className={`flex flex-row align-center justify-end items-center w-full gap-6`}>
+                        <a href={`mailto:${socials.socials["email"]}`} className={`text-sm flex gap-2 align-center justify-end items-center decoration-none  hover:text-blue-100 `}>
+                            <FiMail className={`icon mail`} />
+                            Email
+                        </a>
+                        <a href={`https://www.instagram.com/celsius_o/`} className={`text-sm flex gap-2 align-center justify-end items-center decoration-none  hover:text-blue-100 `}>
+                            <FiInstagram className={`icon`} />
+                            Instagram
+                        </a>
 
                     </div>
                 </div>
@@ -81,29 +84,29 @@ export function ResponsiveNavbar({ activePage, pageName = "" }) {
 
     const [scrolled, setScrolled] = useState(false)
     useEffect(() => {
-  let prevScrollY = window.scrollY;
+        let prevScrollY = window.scrollY;
 
-  const handleScroll = () => {
-    const currentScrollY = window.scrollY;
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
 
-    // 아래로 스크롤 → true
-    if (currentScrollY > prevScrollY) {
-      setScrolled(true);
-    }
-    // 위로 스크롤 → false
-    else {
-      setScrolled(false);
-    }
+            // 아래로 스크롤 → true
+            if (currentScrollY > prevScrollY) {
+            setScrolled(true);
+            }
+            // 위로 스크롤 → false
+            else {
+            setScrolled(false);
+            }
 
-    prevScrollY = currentScrollY;
-  };
+            prevScrollY = currentScrollY;
+        };
 
-  window.addEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", handleScroll);
 
-  return () => {
-    window.removeEventListener("scroll", handleScroll);
-  };
-}, []);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     return (
         <div className={`mobileNav ${scrolled ? "active" : ""}`}>

@@ -86,7 +86,6 @@ console.log(activeKey)
                                 background-image: url("/images/me.png");
                             }
                         `}</style>
-                        {/* <img data-aos="zoom-in-up" src={myPhoto} className={`avatar rounded-[50%] `} /> */}
                     </div>
                     <div data-aos="fade-up" className={`circleA`}>
                         <img src={languages.languages.length === 0 && languages.languages.length > 2 ? "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" : languages.languages[0]} className={`langImgA`} />
@@ -109,11 +108,14 @@ console.log(activeKey)
                         <p data-aos="zoom-in-right" className={`text-base text-slate-600 italic px-3 py-2 bg-blue-10 border-l-[3px] border-solid border-l-blue-100 break-keep mb-5`}>
                             {usersInfo.intro_tagline}
                         </p>
-                        <p data-aos="fade-up" className={`text-sm mb-5 text-slate-500 break-keep`}>
-                            안녕하세요. 저는 디자인과 개발의 경계를 넘나드는 프론트엔드 개발자로,<br/>
-                            사용자의 다음 행동을 먼저 생각하고, 자연스러운 경험을 구현합니다.<br/>
-                            사용자 중심 사고와 디테일한 설계를 바탕으로 완성도 높은<br/>
-                            인터페이스를 구현하며 협업과 책임감을 강점으로 성장해왔습니다.
+                        <p data-aos="fade-up" className={`text-sm mb-5 text-slate-500 break-keep leading-relaxed`}>
+                            안녕하세요.<br/>
+                            저는 디자인과 개발의 경계를 넘나드는 프론트엔드 개발자로,<br/>
+                            사용자의 다음 행동을 먼저 생각하고,<br/>
+                            자연스러운 경험을 구현합니다.<br/>
+                            사용자 중심 사고와 디테일한 설계를 바탕으로<br/>
+                            완성도 높은 인터페이스를 구현하며<br/>
+                            협업과 책임감을 강점으로 성장해왔습니다.
                         </p>
                     </div>
                     <div className={`relative flex align-start items-start justify-start w-full gap-5 mb-8`}>

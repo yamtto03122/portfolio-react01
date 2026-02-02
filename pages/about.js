@@ -66,7 +66,7 @@ function About() {
                     <Link href={"/"}>
                         <FaArrowLeft className='p-2 md:p-3 text-white text-[30px] md:text-[35px] bg-dark-100 rounded-[4px] cursor-pointer mb-3' />
                     </Link>
-                    <h1 className="text-4xl md:text-5xl font-bold mb-3 ">
+                    <h1 className="text-3xl md:text-4xl font-bold mb-3 ">
                         About
                     </h1>
                     <p className="text-sm md:text-base text-slate-400 ">
@@ -94,18 +94,21 @@ function About() {
                                     <p className={`mb-5 text-base text-slate-600 italic px-3 py-2 bg-blue-10 border-l-[3px] border-solid border-l-blue-100 break-keep`}>
                                         {userInfo.intro_tagline}
                                     </p>
-                                    <p className={`text-sm mb-7 text-slate-500 break-keep`}>
-                                        안녕하세요. 저는 디자인과 개발의 경계를 넘나드는 프론트엔드 개발자로,<br/>
-                                        사용자의 다음 행동을 먼저 생각하고, 자연스러운 경험을 구현합니다.<br/>
-                                        사용자 중심 사고와 디테일한 설계를 바탕으로 완성도 높은<br/>
-                                        인터페이스를 구현하며 협업과 책임감을 강점으로 성장해왔습니다.
+                                    <p className={`text-sm mb-7 text-slate-500 break-keep leading-relaxed`}>
+                                        안녕하세요.<br/>
+                                        저는 디자인과 개발의 경계를 넘나드는 프론트엔드 개발자로,<br/>
+                                        사용자의 다음 행동을 먼저 생각하고,<br/>
+                                        자연스러운 경험을 구현합니다.<br/>
+                                        사용자 중심 사고와 디테일한 설계를 바탕으로<br/>
+                                        완성도 높은 인터페이스를 구현하며<br/>
+                                        협업과 책임감을 강점으로 성장해왔습니다.
                                     </p>
                                                 
                                 </div>
                                 <div className={`relative flex flex-col align-start items-start justify-start gap-4 w-full`}>
                                     <div className="w-full flex items-center gap-5">
                                         <div className={`flex-1 flex flex-row items-center justify-start`}>
-                                            <span className={` w-[75px] md:w-20 text-slate-400 text-xs `}>
+                                            <span className={` w-[70px] md:w-20 text-slate-400 text-xs `}>
                                                 Name
                                             </span>
                                             <h1 className={`  text-[15px] md:text-base pt-[5px]  `}>
@@ -113,7 +116,7 @@ function About() {
                                             </h1>
                                         </div>
                                         <div className={`flex-1 flex flex-row items-center justify-start`}>
-                                            <span className={` w-[75px] md:w-20 text-slate-400 text-xs `}>
+                                            <span className={` w-[70px] md:w-20 text-slate-400 text-xs `}>
                                                 Birth date
                                             </span>
                                             <h1 className={`  text-[15px] md:text-base pt-[5px]  `}>
@@ -123,7 +126,7 @@ function About() {
                                     </div>
                                     <div className="w-full flex items-center gap-5">
                                         <div className={`flex-1 flex flex-row items-center justify-start`}>
-                                            <span className={` w-[75px] md:w-20 text-slate-400 text-xs `}>
+                                            <span className={` w-[70px] md:w-20 text-slate-400 text-xs `}>
                                                 Phone
                                             </span>
                                             <h1 className={`  text-[15px] md:text-base pt-[5px]  `}>
@@ -131,7 +134,7 @@ function About() {
                                             </h1>
                                         </div>
                                         <div className={`flex-1 flex flex-row items-center justify-start`}>
-                                            <span className={` w-[75px] md:w-20 text-slate-400 text-xs `}>
+                                            <span className={` w-[70px] md:w-20 text-slate-400 text-xs `}>
                                                 MBTI
                                             </span>
                                             <h1 className={`  text-[15px] md:text-base pt-[5px]  `}>
@@ -140,7 +143,7 @@ function About() {
                                         </div>
                                     </div>
                                     <div className={`w-full flex flex-row items-center justify-start`}>
-                                        <span className={` w-[75px] md:w-20 text-slate-400 text-xs `}>
+                                        <span className={` w-[70px] md:w-20 text-slate-400 text-xs `}>
                                             Education
                                         </span>
                                         <h1 className={`  text-[15px] md:text-base pt-[5px]  `}>
@@ -148,7 +151,7 @@ function About() {
                                         </h1>
                                     </div>
                                     <div className={`w-full flex flex-row items-center justify-start`}>
-                                        <span className={` w-[75px] md:w-20 text-slate-400 text-xs `}>
+                                        <span className={` w-[70px] md:w-20 text-slate-400 text-xs `}>
                                             Address
                                         </span>
                                         <h1 className={`  text-[15px] md:text-base pt-[5px]  `}>
@@ -156,7 +159,7 @@ function About() {
                                         </h1>
                                     </div>
                                     <div className={`w-full flex flex-row items-center justify-start`}>
-                                        <span className={` w-[75px] md:w-20 text-slate-400 text-xs `}>
+                                        <span className={` w-[70px] md:w-20 text-slate-400 text-xs `}>
                                             Email
                                         </span>
                                         <h1 className={`  text-[15px] md:text-base pt-[5px]  `}>

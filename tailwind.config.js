@@ -38,6 +38,8 @@ module.exports = {
       backgroundImage: {
         'hero-gradient':
           'linear-gradient(0deg,rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%)',
+        'blue-50-gradient':
+        'linear-gradient(0deg,rgba(237, 240, 255, 1) 0%, rgba(237, 240, 255, 0) 80%);',
       },
 
     },

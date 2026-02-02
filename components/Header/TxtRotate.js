@@ -55,7 +55,7 @@ export default function TxtRotate({
   }, [toRotate, period]);
 
   return (
-    <span className={`txt-rotate text-blue-100 ${className}`}>
+    <span className={`txt-rotate text-blue-100 font-extrabold ${className}`}>
       <span className="wrap border-r-[2.5px] border-[#666] pr-0.5">{" "}{renderTxt}</span>
     </span>
   );

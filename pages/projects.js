@@ -33,7 +33,7 @@ function Projects() {
                     <Link href={"/"}>
                         <FaArrowLeft className='p-2 md:p-3 text-white text-[30px] md:text-[35px] bg-dark-100 rounded-[4px] cursor-pointer mb-3' />
                     </Link>
-                    <h1 className="text-4xl md:text-5xl font-bold mb-3 ">
+                    <h1 className="text-3xl md:text-4xl font-bold mb-3 ">
                         Projects
                     </h1>
                     <p className="text-sm md:text-base text-slate-400 ">
@@ -65,7 +65,7 @@ function ProjectsCard() {
                 projects.projects.length > 0 ?
                     projects.projects.map((list, i) => {
                         return (
-                            <a href={list.project_url} key={i} className={`box w-full h-auto bg-blue-50 rounded-md relative transition-all !opacity-[0.75] hover:!opacity-[1] overflow-hidden hover:shadow-md`}>
+                            <a href={list.project_url} target="_blank" key={i} className={`box w-full h-auto bg-blue-50 rounded-md relative transition-all !opacity-[0.75] hover:!opacity-[1] overflow-hidden hover:shadow-md`}>
                                     <div className="imgCont relative">
                                         <div className="h-1/2 absolute bottom-0 p-3 w-full bg-hero-gradient flex flex-col justify-end">
                                             <p className="text-xs text-white/70 mb-0.5">{list.date}</p>
