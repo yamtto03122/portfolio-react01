@@ -54,7 +54,7 @@ function Contact() {
                     <p data-aos="fade-right" className=" text-lg text-white mb-1">
                         언제든 부담 없이 편하게 연락 주세요!
                     </p>
-                    <span data-aos="fade-right" className=" text-green-200 text-lg underline cursor-pointer " onClick={openContactForm}>Saying Hi! 👋🏻</span>
+                    <span data-aos="fade-right" className=" text-green-200 text-xl underline cursor-pointer font-semibold" onClick={openContactForm}>Saying Hi! 👋🏻</span>
                 </div>
             </Container>
 

@@ -10,6 +10,15 @@ import { IoCubeOutline, IoHomeOutline, IoMailOutline, IoPersonOutline } from "re
 import { useRouter } from "next/router"
 
 function NavBar() {
+    const router = useRouter();
+    const [active, setActive] = useState("home")
+
+    useEffect(() => {
+        if (router.pathname === "/") setActive("home");
+        else if (router.pathname === "/projects") setActive("projects");
+        else if (router.pathname === "/about") setActive("about");
+        else if (router.pathname === "/#contact") setActive("contact");
+    }, [router.pathname]);
 
     const [scrolled, setScrolled] = useState(false)
     useEffect(() => {
@@ -27,19 +36,19 @@ function NavBar() {
         <React.Fragment>
             <div className={`navbar fixed top-0 h-auto w-screen left-0 px-4 md:px-[10%] flex align-center justify-between py-[20px] transition-all duration-300 ${scrolled ? "bg-white/60 shadow-sm backdrop-blur-md z-10" : ""}`}>
                 <div className={`left w-auto flex items-center justify-start gap-12`}>
-                    <p className={`font-extrabold text-2xl `}><span className="text-white relative before:w-8 before:h-8 before:bg-blue-100 before:rounded-full before:absolute before:-z-10 before:left-[45%] before:top-1/2 before:-translate-x-1/2 before:-translate-y-1/2">D</span>oYoung</p>
+                    <p className={`font-extrabold text-xl md:text-2xl pl-[7px]`}><span className="text-white relative before:w-7 before:h-7 md:before:w-8 md:before:h-8 before:bg-blue-100 before:rounded-full before:absolute before:-z-10 before:left-[45%] before:top-1/2 before:-translate-x-1/2 before:-translate-y-1/2">D</span>oYoung</p>
 
                     <ul className={`relative hidden md:flex gap-9`}>
-                        <li className={`transition-all hover:text-blue-100 hover:font-extrabold cursor-pointer text-base`}>
+                        <li className={`transition-all hover:text-blue-100 hover:font-extrabold cursor-pointer text-base ${active === "home" ? `text-blue-100 font-extrabold` : ``}`}>
                             <Link href="/">Home</Link>
                         </li>
-                        <li className={`transition-all hover:text-blue-100 hover:font-extrabold cursor-pointer text-base`}>
+                        <li className={`transition-all hover:text-blue-100 hover:font-extrabold cursor-pointer text-base ${active === "about" ? `text-blue-100 font-extrabold` : ``}`}>
                             <Link href="/about">About</Link>
                         </li>
-                        <li className={`transition-all hover:text-blue-100 hover:font-extrabold cursor-pointer text-base`}>
+                        <li className={`transition-all hover:text-blue-100 hover:font-extrabold cursor-pointer text-base ${active === "projects" ? `text-blue-100 font-extrabold` : ``}`}>
                             <Link href="/projects">Projects</Link>
                         </li>
-                        <li className={`transition-all hover:text-blue-100 hover:font-extrabold cursor-pointer text-base`}>
+                        <li className={`transition-all hover:text-blue-100 hover:font-extrabold cursor-pointer text-base ${active === "contact" ? `text-blue-100 font-extrabold` : ``}`}>
                             <Link href="/#contact">Contact</Link>
                         </li>
                     </ul>

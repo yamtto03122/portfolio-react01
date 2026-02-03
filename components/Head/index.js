@@ -26,13 +26,15 @@ export default function DomHead({ pageName = "Home Page" }) {
             {/* meta tags begins */}
             {/* Primary Meta Tags */}
             <meta name="title" content="Doyoung Portfolio" />
-            <meta name="description" content="김도영 포트폴리오 입니다🐹" />
+            <meta name="description" content="김도영 포트폴리오 입니다 🐹" />
             {/* Open Graph / Facebook */}
             <meta property="og:type" content="website" />
             <meta property="og:url" content="https://www.doyoung.me.kr/" />
             <meta property="og:title" content="Doyoung Portfolio" />
-            <meta property="og:description" content="김도영 포트폴리오 입니다🐹" />
-            <meta property="og:image" content="https://github.com/Benrobo/baaymax-assets/blob/main/app.png?raw=true" />
+            <meta property="og:description" content="김도영 포트폴리오 입니다 🐹" />
+            <meta property="og:image" content="https://www.doyoung.me.kr/og/og-image.png" />
+            <meta property="og:image:width" content="1200" />
+            <meta property="og:image:height" content="630" />
         </Head>
     )
 }

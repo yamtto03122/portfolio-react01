@@ -5,6 +5,7 @@ import { FaArrowLeft } from 'react-icons/fa'
 import { ResponsiveNavbar } from '../components/Navbar'
 
 import userInfo from "../data/usersInfo.json"
+import { IoClose } from 'react-icons/io5'
 
 function About() {
     const [windowWidth, setWindowWidth] = useState(0)
@@ -34,22 +35,21 @@ function About() {
         function dowloadCv() {
             let link = document.createElement("a")
             link.href = resume;
-            link.download = "resume.pdf"
+            link.download = "resume_kimdoyoung.pdf"
             link.click()
         }
 
         return (
-            <div className="fixed top-0 left-0 w-full h-screen bg-dark-400 z-[1500] flex flex-row items-center justify-center">
-                <div id="box" className="w-[100%] h-[99%] mx-auto bg-dark-100 overflow-hidden rounded-md md:w-[70%]">
-                    <div id="head" className="w-full h-auto p-3 bg-dark-200 flex items-start justify-start">
-                        <h2>My Resume</h2>
-                        <button className="px-3 py-1 flex flex-row items-center justify-center bg-green-300 ml-4 text-[12px] text-dark-300 font-bold rounded-[5px] scale-[.90] transition-all hover:scale-[.95]  " onClick={dowloadCv}>Download</button>
-                        <button className="px-3 py-1 flex flex-row items-center justify-center bg-red-500 ml-4 text-[12px] text-dark-300 font-bold rounded-[5px] scale-[.90] transition-all hover:scale-[.95] " onClick={openResume}>Close</button>
+            <div className="fixed top-0 left-0 w-full px-4 h-screen bg-dark-400 z-[1500] flex flex-row items-center justify-center">
+                <div id="box" className="w-[100%] h-[95vh] mx-auto bg-white overflow-hidden rounded-md md:w-[70%]">
+                    <div id="head" className="w-full h-auto p-3 bg-white flex items-center justify-between">
+                        <div className="flex items-center gap-4">
+                            <h2 className="font-bold">김도영 이력서✨</h2>
+                            <button className="px-3 py-1 flex flex-row items-center justify-center bg-blue-100 text-[12px] text-white font-bold rounded-[5px] scale-[.90] transition-all hover:scale-[.95]  " onClick={dowloadCv}>Download</button>
+                        </div>
+                        <button className="text-2xl text-slate-600" onClick={openResume}><IoClose/></button>
                     </div>
-                    <iframe src={"/CV/resume.pdf"} frameborder="0" className="w-full h-full overflow-scroll bg-white-200 mt-0"></iframe>
-                    <br />
-                    <br />
-                    <br />
+                    <iframe src={"/CV/resume_kimdoyoung.pdf"} frameborder="0" className="w-full h-full overflow-scroll bg-white mt-0"></iframe>
                 </div>
             </div>
         )
