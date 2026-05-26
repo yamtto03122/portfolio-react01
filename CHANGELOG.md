@@ -67,7 +67,7 @@
 
 ---
 
-## 2026-05-26 (추가)
+## 2026-05-26 (2차)
 
 ### 한 일
 
@@ -89,6 +89,34 @@
 
 - `about.js:166` 이메일 오타 — `hell03122` (`o` 누락)
 - `about.js:37` `resume` 변수 미정의 — Download 버튼 클릭 시 콘솔 `ReferenceError`
+
+---
+
+## 2026-05-26 (3차)
+
+### 한 일
+
+**미완료 버그 수정 및 전체 배포**
+
+**about.js 이메일 오타 수정** `pages/about.js:166`
+- `hell03122@naver.com` → `hello03122@naver.com` (`o` 누락 수정)
+
+**about.js resume 변수 미정의 수정** `pages/about.js:37`
+- Download 버튼 클릭 시 `ReferenceError: resume is not defined` 오류 수정
+- `link.href = resume` → `link.href = "/CV/resume_kimdoyoung.pdf"` (iframe과 동일 경로로 고정)
+
+**배포**
+- 커밋: `47d3ea3` — 포트폴리오 전체 개선: 버그 수정·콘텐츠·UX 개선 일괄 반영
+- `git push origin master` → GitHub Actions 자동 빌드·배포
+- 배포 결과: ✅ success (완료: 2026-05-26T09:08:25Z)
+- 운영 확인: https://doyoung.me.kr — Navbar Instagram(celsius_o) 정상, 이메일 링크 정상
+
+### 미완료 / 다음 세션에서 할 것
+
+| # | 항목 | 내용 | 담당 |
+|---|------|------|------|
+| 1 | `socials.json` github | GitHub 프로필 URL 비어 있음 | 도영 |
+| 2 | `projects.json` 역할 구체화 | 각 프로젝트 "기여도 %" 외에 담당 기능·역할 한 줄 추가 권장 (현우 팀장) | 도영 |
 
 ---
 

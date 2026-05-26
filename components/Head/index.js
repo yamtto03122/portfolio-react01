@@ -6,7 +6,8 @@ export default function DomHead({ pageName = "Home Page" }) {
     return (
         <Head>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <title>{userInfo.github_username} Portfolio - {pageName} </title>
+            {/* [수정 로그] github_username → display_name 으로 변경 (타이틀에 API용 계정명 노출 방지) */}
+            <title>{userInfo.display_name} Portfolio - {pageName} </title>
 
             {/* favicon */}
             <link rel="icon" href="/favicon/favicon.ico" />
