@@ -160,4 +160,15 @@
 
 ---
 
+## 2026-05-26 (7차)
+
+### 한 일
+
+**projects.json URL .html 확장자 제거** `data/projects.json`
+- `cms.Html` → `cms`
+- `cosmetic.Html` → `cosmetic`
+- `bakum.html` → `bakum`
+
+---
+
 <!-- 새 날짜 작업 시 위 형식으로 ## YYYY-MM-DD 섹션 추가 -->
