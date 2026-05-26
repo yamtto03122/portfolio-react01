@@ -59,9 +59,9 @@ function NavBar() {
                             <FiMail className={`icon mail`} />
                             Email
                         </a>
-                        {/* [수정 로그] 하드코딩 URL → socials.json 연동으로 변경 */}
+                        {/* [수정 로그] 하드코딩 URL → socials.json 연동, target="_blank" 추가 */}
                         {socials.socials.instagram && (
-                            <a href={socials.socials.instagram} className={`text-sm flex gap-2 align-center justify-end items-center decoration-none  hover:text-blue-100 `}>
+                            <a href={socials.socials.instagram} target="_blank" rel="noopener noreferrer" className={`text-sm flex gap-2 align-center justify-end items-center decoration-none  hover:text-blue-100 `}>
                                 <FiInstagram className={`icon`} />
                                 Instagram
                             </a>

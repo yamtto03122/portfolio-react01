@@ -120,4 +120,35 @@
 
 ---
 
+## 2026-05-26 (4차)
+
+### 한 일
+
+**사이트 타이틀 display_name 적용** `components/Head/index.js`
+
+- 타이틀이 `yamtto03122 Portfolio` 로 노출되던 것을 `DoYoung Portfolio` 로 수정
+- `github_username` → `display_name` 으로 변경 (github_username / display_name 분리 작업 마무리)
+- 커밋: `aacb6e4`
+- 배포 결과: ✅ success (완료: 2026-05-26T09:15:04Z)
+- 운영 확인: 타이틀 `DoYoung Portfolio - Home Page` 정상 노출
+
+---
+
+## 2026-05-26 (5차)
+
+### 한 일
+
+**이메일 문의 버튼 Contact form 연동** `components/Intro/index.js`
+- Hero 영역 "이메일 문의" 버튼: `mailto:` 링크 → `openContactForm()` 호출로 변경 (Contact 섹션 "Saying Hi!" 와 동일 액션)
+- `DataContext`에서 `openContactForm` 가져오도록 수정, 불필요해진 `socials` import 제거
+
+**Navbar Instagram `target="_blank"` 추가** `components/Navbar/index.js`
+- Instagram 링크 클릭 시 새 탭으로 열리도록 `target="_blank" rel="noopener noreferrer"` 추가
+
+**배포**
+- 커밋: `master` push → GitHub Actions 자동 배포
+- 운영 확인: https://doyoung.me.kr
+
+---
+
 <!-- 새 날짜 작업 시 위 형식으로 ## YYYY-MM-DD 섹션 추가 -->

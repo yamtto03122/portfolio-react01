@@ -4,17 +4,17 @@ import Link from "next/link"
 
 import careers from "../../data/careers.json"
 import usersInfo from "../../data/usersInfo.json"
-import { useState, useEffect, useMemo } from "react"
+import { useState, useEffect, useMemo, useContext } from "react"
+import DataContext from "../../context/DataContext"
 import { IoColorWand } from "react-icons/io5";
 import languages from "../../data/languages.json"
 import { FaArrowRight } from "react-icons/fa6";
 import projects from "../../data/projects.json"
 import skills from "../../data/skills.json";
-// [수정 로그] Hero 이메일 CTA 추가를 위해 socials 데이터 import
-import socials from "../../data/socials.json"
 
 export default function Intro() {
 
+    const { openContactForm } = useContext(DataContext)
     const [resumeActive, setResumeActive] = useState(false)
     const [reposcount, setReposCount] = useState(0)
     const [avatar, setAvatar] = useState("")
@@ -138,16 +138,16 @@ export default function Intro() {
                             </h1>
                         </div>
                     </div>
-                    {/* [수정 로그] Hero 영역 CTA 개선 — 채용 담당자가 바로 연락할 수 있도록 이메일 버튼 추가 */}
+                    {/* [수정 로그] 이메일 문의 버튼 — Contact form 열기로 변경 (Saying Hi와 동일 액션) */}
                     <div className="flex items-center gap-3 flex-wrap mt-14">
                         <Link href="/about" data-aos="zoom-in-up" className="text-base md:text-lg flex items-center gap-2 w-fit border-[2px] border-solid border-blue-100 px-5 py-3 bg-dark-100 text-blue-50 rounded-full scale-[.90] hover:scale-[.95] transition-all">
                             More Profile
                             <FaArrowRight />
                         </Link>
-                        <a href={`mailto:${socials.socials.email}`} data-aos="zoom-in-up" className="text-base md:text-lg flex items-center gap-2 w-fit border-[2px] border-solid border-blue-100 px-5 py-3 bg-blue-100 text-white rounded-full scale-[.90] hover:scale-[.95] transition-all">
+                        <button onClick={openContactForm} data-aos="zoom-in-up" className="text-base md:text-lg flex items-center gap-2 w-fit border-[2px] border-solid border-blue-100 px-5 py-3 bg-blue-100 text-white rounded-full scale-[.90] hover:scale-[.95] transition-all">
                             이메일 문의
                             <FaArrowRight />
-                        </a>
+                        </button>
                     </div>
                     
                 </div>
