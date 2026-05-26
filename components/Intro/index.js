@@ -145,7 +145,7 @@ export default function Intro() {
                             <FaArrowRight />
                         </Link>
                         <button onClick={openContactForm} data-aos="zoom-in-up" className="text-base md:text-lg flex items-center gap-2 w-fit border-[2px] border-solid border-blue-100 px-5 py-3 bg-blue-100 text-white rounded-full scale-[.90] hover:scale-[.95] transition-all">
-                            이메일 문의
+                            Contact Me
                             <FaArrowRight />
                         </button>
                     </div>
