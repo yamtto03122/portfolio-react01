@@ -33,8 +33,9 @@ function About() {
     function ResumeViewer({ openResume }) {
 
         function dowloadCv() {
+            // [수정 로그] resume 변수 미정의로 ReferenceError 발생하던 버그 수정 → iframe과 동일한 경로로 고정
             let link = document.createElement("a")
-            link.href = resume;
+            link.href = "/CV/resume_kimdoyoung.pdf";
             link.download = "resume_kimdoyoung.pdf"
             link.click()
         }
@@ -163,7 +164,7 @@ function About() {
                                             Email
                                         </span>
                                         <h1 className={`  text-[15px] md:text-base pt-[5px]  `}>
-                                            hell03122@naver.com
+                                            hello03122@naver.com
                                         </h1>
                                     </div>
                                 </div>

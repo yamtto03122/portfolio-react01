@@ -147,7 +147,8 @@ function GithubRepo() {
                 setLoading(false)
 
                 if (data && data.length > 0) {
-                    localStorage.setItem("user_repo", JSON.stringify(data))
+                    // [수정 로그] "user_repo" → "user_repos" 로 통일 (GithubRepo 컴포넌트 읽기 키와 불일치하던 버그 수정)
+                    localStorage.setItem("user_repos", JSON.stringify(data))
                     setRepo(data)
                     return
                 }

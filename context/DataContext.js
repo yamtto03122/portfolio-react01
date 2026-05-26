@@ -53,7 +53,8 @@ export function DataContextProvider({ children }) {
             let data = await res.json()
 
             if (data) {
-                localStorage.setItem("user_repo", JSON.stringify(data))
+                // [수정 로그] "user_repo" → "user_repos" 로 통일 (Projects 컴포넌트 읽기 키와 불일치하여 캐시 미동작하던 버그 수정)
+                localStorage.setItem("user_repos", JSON.stringify(data))
 
                 console.log("USER PUBLIC REPOS UPDATED IN BACKGROUND")
             }

@@ -10,6 +10,8 @@ import languages from "../../data/languages.json"
 import { FaArrowRight } from "react-icons/fa6";
 import projects from "../../data/projects.json"
 import skills from "../../data/skills.json";
+// [수정 로그] Hero 이메일 CTA 추가를 위해 socials 데이터 import
+import socials from "../../data/socials.json"
 
 export default function Intro() {
 
@@ -73,7 +75,7 @@ export default function Intro() {
 
     const activeSkills = skills?.skill?.[activeKey] ?? [];
     const title = categories.find((c) => c.key === activeKey)?.label ?? "Skill Stack";
-console.log(activeKey)
+    // [수정 로그] 프로덕션 배포 코드에서 불필요한 console.log 제거
     return (
         <>
 
@@ -136,10 +138,17 @@ console.log(activeKey)
                             </h1>
                         </div>
                     </div>
-                    <Link href="/about" data-aos="zoom-in-up" className="text-base md:text-lg mt-14 flex items-center gap-2 w-fit border-[2px] border-solid border-blue-100 px-5 py-3 bg-dark-100 text-blue-50 rounded-full scale-[.90] hover:scale-[.95] transition-all ">
-                        More Profile
-                        <FaArrowRight />
-                    </Link>
+                    {/* [수정 로그] Hero 영역 CTA 개선 — 채용 담당자가 바로 연락할 수 있도록 이메일 버튼 추가 */}
+                    <div className="flex items-center gap-3 flex-wrap mt-14">
+                        <Link href="/about" data-aos="zoom-in-up" className="text-base md:text-lg flex items-center gap-2 w-fit border-[2px] border-solid border-blue-100 px-5 py-3 bg-dark-100 text-blue-50 rounded-full scale-[.90] hover:scale-[.95] transition-all">
+                            More Profile
+                            <FaArrowRight />
+                        </Link>
+                        <a href={`mailto:${socials.socials.email}`} data-aos="zoom-in-up" className="text-base md:text-lg flex items-center gap-2 w-fit border-[2px] border-solid border-blue-100 px-5 py-3 bg-blue-100 text-white rounded-full scale-[.90] hover:scale-[.95] transition-all">
+                            이메일 문의
+                            <FaArrowRight />
+                        </a>
+                    </div>
                     
                 </div>
             </div>

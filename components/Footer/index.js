@@ -13,7 +13,8 @@ function Footer() {
         <div className="relative flex flex-row items-center justify-between">
           <div className="left flex flex-row items-center">
             <h1 className=" text-base text-white ">
-              <span className="font-extrabold">{usersInfo.github_username}</span>
+              {/* [수정 로그] github_username → display_name 분리 적용 (GitHub API용 username과 표시 이름 분리) */}
+              <span className="font-extrabold">{usersInfo.display_name}</span>
             </h1>
             <small className="ml-10 text-white/70 ">
               &copy; {new Date().getFullYear()} All Right Reserved.

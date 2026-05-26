@@ -24,7 +24,7 @@
         {
             "name":"SCSS",
             "icon" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg",
-            "description" : "프론트앤드 교육 이수 과정 중 학습했습니다."
+            "description" : "교육 과정에서 학습하였으며, 변수·믹스인·중첩 등의 기능을 이해하고 실무에서 활용한 경험이 있습니다."
         }
 ],
 "frontEnd" : [
@@ -52,7 +52,7 @@
         {
             "name":"TailwindCSS",
             "icon" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
-            "description" : "최근 즐겨 사용하고 있습니다. 프로젝트에 적용한 경험이 있습니다."
+            "description" : "실무 프로젝트에서 꾸준히 활용하고 있으며, 유틸리티 클래스 기반의 빠른 UI 구현에 익숙합니다."
         }
     ],
     "etc" : [

@@ -13,7 +13,7 @@ function Projects() {
     const [repo, setRepo] = useState([])
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null)
-    console.log(projects.projects)
+    // [수정 로그] 프로덕션 배포 코드에서 불필요한 console.log 제거
 
     async function fetchRepos() {
         let res;
@@ -25,7 +25,8 @@ function Projects() {
                 let data = await res.json()
                 setLoading(false)
                 if (data && data.length > 0) {
-                    localStorage.setItem("user_repo", JSON.stringify(data))
+                    // [수정 로그] "user_repo" → "user_repos" 로 통일 (DataContext의 저장 키와 불일치하던 버그 수정)
+                    localStorage.setItem("user_repos", JSON.stringify(data))
                     setRepo(data)
                     return
                 }
